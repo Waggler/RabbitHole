@@ -383,7 +383,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.0181488, y: 1}
+    m_SensorSize: {x: 1.0743406, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -575,10 +575,8 @@ GameObject:
   m_Component:
   - component: {fileID: 374563231}
   - component: {fileID: 374563234}
-  - component: {fileID: 374563233}
   - component: {fileID: 374563232}
-  - component: {fileID: 374563235}
-  - component: {fileID: 374563236}
+  - component: {fileID: 374563233}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -651,22 +649,21 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 374563230}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9dd7c540becbf14f90a17d8576cf052, type: 3}
+  m_Script: {fileID: 11500000, guid: e07635c79c61faf4da39cb814b263c2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 374563234}
-  cam: {fileID: 1396975516}
-  turnSmoothTime: 0.1
-  speed: 10
-  gravity: -30
+  speed: 12
+  gravity: -9.81
   jumpHeight: 3
+  crouchHeight: 0
   groundCheck: {fileID: 904429316}
   groundDistance: 0.4
   groundMask:
     serializedVersion: 2
-    m_Bits: 768
+    m_Bits: 512
 --- !u!143 &374563234
 CharacterController:
   m_ObjectHideFlags: 0
@@ -685,32 +682,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &374563235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 374563230}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6989443876ae26f44ac05958490f53ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  turnSpeed: 20
---- !u!114 &374563236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 374563230}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1511ccae7919cfc46b603b9b337fdc94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &640574807
 GameObject:
   m_ObjectHideFlags: 0
@@ -849,7 +820,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.0181488, y: 1}
+    m_SensorSize: {x: 1.0743406, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1002,7 +973,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.0181488, y: 1}
+    m_SensorSize: {x: 1.0743406, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1434,7 +1405,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.0181488, y: 1}
+    m_SensorSize: {x: 1.0743406, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
