@@ -15,8 +15,22 @@ public class GunScript : MonoBehaviour
     private float nextTimeToFire = 1f;
 
     public bool reloading;
-    
+
     public Camera fpsCam;
+
+    [SerializeField]
+    private Transform firePoint;
+
+    private void Start()
+    {
+        Init();
+    }
+
+
+    public void Init()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
 
     void Update()
     {
@@ -36,8 +50,10 @@ public class GunScript : MonoBehaviour
     }
     void Shoot()
     {
+        Debug.DrawRay(firePoint.position, firePoint.forward * 100, Color.red, 2f);
         RaycastHit hit;
 
+        //if (Physics.Raycast(firePoint.position, firePoint.forward, out hit, range))
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
             Debug.Log(hit.transform.name);
