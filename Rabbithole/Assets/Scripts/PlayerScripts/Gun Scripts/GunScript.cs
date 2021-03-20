@@ -19,7 +19,7 @@ public class GunScript : MonoBehaviour
     public Camera fpsCam;
 
     [SerializeField]
-    private Transform firePoint;
+    //private Transform firePoint;
 
     private void Start()
     {
@@ -50,7 +50,7 @@ public class GunScript : MonoBehaviour
     }
     void Shoot()
     {
-        Debug.DrawRay(firePoint.position, firePoint.forward * 100, Color.red, 2f);
+        Debug.DrawRay(fpsCam.transform.position, fpsCam.transform.forward * 100, Color.red, 2f);
         RaycastHit hit;
 
         //if (Physics.Raycast(firePoint.position, firePoint.forward, out hit, range))
