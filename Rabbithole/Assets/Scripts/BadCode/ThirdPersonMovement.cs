@@ -15,6 +15,7 @@ public class ThirdPersonMovement : MonoBehaviour
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
     bool isGrounded;
+    bool isGliding;
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
@@ -53,9 +54,36 @@ public class ThirdPersonMovement : MonoBehaviour
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
 
-        // Handles Gravity
+        if (Input.GetButtonDown("Jump") && !isGrounded)
+        {
+            if (!isGliding)
+            {
+                gravity = -10;
+                isGliding = true;
+            }
+            else if (isGliding == true)
+            {
+                gravity = -30;
+                isGliding = false;
+            }
+        }
 
-        velocity.y += gravity * Time.deltaTime;
+        if (isGrounded == true)
+        {
+            gravity = -30;
+            isGliding = false;
+        }
+
+
+            /*if (Input.GetButtonDown("Dash"))
+            {
+                Debug.Log("Dash");
+                _velocity += Vector3.Scale(transform.forward, DashDistance * new Vector3((Mathf.Log(1f / (Time.deltaTime * Drag.x + 1)) / -Time.deltaTime), 0, (Mathf.Log(1f / (Time.deltaTime * Drag.z + 1)) / -Time.deltaTime)));
+            }*/
+
+            // Handles Gravity
+
+            velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
     }// END Update
