@@ -14,6 +14,7 @@ public class ThirdPersonMovement : MonoBehaviour
     public float speed = 6f;
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
+    public float dashDistance = 3f;
     bool isGrounded;
     bool isGliding;
     public Transform groundCheck;
@@ -21,6 +22,7 @@ public class ThirdPersonMovement : MonoBehaviour
     public LayerMask groundMask;
 
     Vector3 velocity;
+    public Vector3 Drag;
 
     private void Start()
     {
@@ -75,16 +77,19 @@ public class ThirdPersonMovement : MonoBehaviour
         }
 
 
-            /*if (Input.GetButtonDown("Dash"))
+            if (Input.GetKeyDown(KeyCode.LeftShift))
             {
                 Debug.Log("Dash");
-                _velocity += Vector3.Scale(transform.forward, DashDistance * new Vector3((Mathf.Log(1f / (Time.deltaTime * Drag.x + 1)) / -Time.deltaTime), 0, (Mathf.Log(1f / (Time.deltaTime * Drag.z + 1)) / -Time.deltaTime)));
-            }*/
+                velocity += Vector3.Scale(transform.forward, dashDistance * new Vector3((Mathf.Log(1f / (Time.deltaTime * Drag.x + 1)) / -Time.deltaTime), 0, (Mathf.Log(1f / (Time.deltaTime * Drag.z + 1)) / -Time.deltaTime)));
+            }
 
             // Handles Gravity
 
             velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+        velocity.x /= 1 + Drag.x * Time.deltaTime;
+        velocity.y /= 1 + Drag.y * Time.deltaTime;
+        velocity.z /= 1 + Drag.z * Time.deltaTime;
     }// END Update
 }
