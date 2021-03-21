@@ -26,7 +26,7 @@ public class DialogueManager : MonoBehaviour
 
         // Press Spacebar to go to the next sentence
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Interact"))
         {
             DisplayNextSentence();
         }

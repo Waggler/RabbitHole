@@ -16,10 +16,14 @@ public class GunScript : MonoBehaviour
 
     public bool reloading;
 
+    public AudioSource audioSource;
+    public AudioClip gunShot;
+
+
     public Camera fpsCam;
 
     [SerializeField]
-    private Transform firePoint;
+    //private Transform firePoint;
 
     private void Start()
     {
@@ -40,6 +44,8 @@ public class GunScript : MonoBehaviour
             Shoot();
             ammoCount += 1;
 
+            audioSource.PlayOneShot(gunShot, 0.7f);
+
         }
 
         if (Input.GetKeyDown(KeyCode.R) && reloading == false)
@@ -50,7 +56,7 @@ public class GunScript : MonoBehaviour
     }
     void Shoot()
     {
-        Debug.DrawRay(firePoint.position, firePoint.forward * 100, Color.red, 2f);
+        Debug.DrawRay(fpsCam.transform.position, fpsCam.transform.forward * 100, Color.red, 2f);
         RaycastHit hit;
 
         //if (Physics.Raycast(firePoint.position, firePoint.forward, out hit, range))
