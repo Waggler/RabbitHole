@@ -26,7 +26,6 @@ public class ThirdPersonMovement : MonoBehaviour
     Vector3 velocity;
     public Vector3 Drag;
 
-
     private float waitTime = 0.5f;
     public float timer = 0.0f;
 

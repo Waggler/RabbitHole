@@ -16,6 +16,10 @@ public class GunScript : MonoBehaviour
 
     public bool reloading;
 
+    public AudioSource audioSource;
+    public AudioClip gunShot;
+
+
     public Camera fpsCam;
 
     [SerializeField]
@@ -39,6 +43,8 @@ public class GunScript : MonoBehaviour
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
             ammoCount += 1;
+
+            audioSource.PlayOneShot(gunShot, 0.7f);
 
         }
 
