@@ -735,7 +735,7 @@ PrefabInstance:
     - target: {fileID: 1546838555729203591, guid: 4561b3696e1994245a670601354458d3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.011802
+      value: 13.65
       objectReference: {fileID: 0}
     - target: {fileID: 1546838555729203591, guid: 4561b3696e1994245a670601354458d3,
         type: 3}
@@ -1211,12 +1211,18 @@ MonoBehaviour:
   gravity: -30
   jumpHeight: 3
   dashDistance: 5
+  dashCooldown: 2
+  isGrounded: 0
+  isGliding: 0
+  isDashing: 0
   groundCheck: {fileID: 186160259}
   groundDistance: 0.4
   groundMask:
     serializedVersion: 2
     m_Bits: 768
   Drag: {x: 10, y: 0, z: 10}
+  waitTime: 0.35
+  timer: 0
 --- !u!143 &543227471
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1661,7 +1667,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 801592099}
-  m_LocalRotation: {x: 0.04046394, y: -0.1018968, z: -0.00414819, w: -0.99396306}
+  m_LocalRotation: {x: 0.040463943, y: -0.1018968, z: -0.0041481876, w: -0.99396306}
   m_LocalPosition: {x: -34.33, y: 2.427143, z: -26.195429}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2332,7 +2338,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1093273440}
-  m_LocalRotation: {x: -0.040463913, y: 0.10189679, z: 0.004148187, w: 0.99396306}
+  m_LocalRotation: {x: -0.040463906, y: 0.10189679, z: 0.004148184, w: 0.99396306}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3853,7 +3859,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1977479432}
-  m_LocalRotation: {x: -0.040463913, y: 0.10189679, z: 0.004148187, w: 0.99396306}
+  m_LocalRotation: {x: -0.040463906, y: 0.10189679, z: 0.004148184, w: 0.99396306}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
