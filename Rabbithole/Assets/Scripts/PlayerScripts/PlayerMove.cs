@@ -59,7 +59,7 @@ public class PlayerMove : MonoBehaviour
         }
 
         // Glide
-        if (Input.GetButton("Jump"))
+        if (Input.GetButtonDown("Jump") && !isGrounded)
         {
             gravity = -10;
         }

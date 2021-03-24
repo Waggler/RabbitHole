@@ -14,12 +14,20 @@ public class ThirdPersonMovement : MonoBehaviour
     public float speed = 6f;
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
-    bool isGrounded;
+    public float dashDistance = 3f;
+    public float dashCooldown = 2f;
+    public bool isGrounded;
+    public bool isGliding;
+    public bool isDashing;
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
 
     Vector3 velocity;
+    public Vector3 Drag;
+
+    public float waitTime = 0.35f;
+    public float timer = 0.0f;
 
     private void Start()
     {
@@ -38,6 +46,7 @@ public class ThirdPersonMovement : MonoBehaviour
         // Checks if player is grounded
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
+        // Handles Movement Logic
         if (direction.magnitude >= 0.1f)
         {
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
@@ -48,15 +57,61 @@ public class ThirdPersonMovement : MonoBehaviour
             controller.Move(moveDir.normalized * speed * Time.deltaTime);
         }
 
+        // Handles Jumping Logic
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            
         }
 
-        // Handles Gravity
+        if (!isGrounded)
+        {
+            timer += Time.deltaTime;
+        }
 
+        // Handles Gliding Logic
+        if (Input.GetButtonDown("Jump") && !isGrounded && timer > waitTime)
+        {
+            if (!isGliding)
+            {
+                gravity = -10;
+                isGliding = true;
+            }
+            else if (isGliding == true)
+            {
+                gravity = -30;
+                isGliding = false;
+            }
+        }
+
+        // Handles Resetting Glide
+        if (isGrounded == true)
+        {
+            gravity = -30;
+            isGliding = false;
+            timer = 0;
+        }
+
+        // Handles Dashing Logic
+        if (Input.GetButtonDown("DashButton") && isDashing == false && isGrounded) // Jordan changed the input to "DashButton" now works with controller and Keyboard.
+        {
+            Debug.Log("Dash");
+            StartCoroutine(Dash());
+        }
+
+        // Handles Gravity and Dash Physics
         velocity.y += gravity * Time.deltaTime;
-
         controller.Move(velocity * Time.deltaTime);
+        velocity.x /= 1 + Drag.x * Time.deltaTime;
+        velocity.y /= 1 + Drag.y * Time.deltaTime;
+        velocity.z /= 1 + Drag.z * Time.deltaTime;
     }// END Update
+
+    private IEnumerator Dash()
+    {
+        velocity += Vector3.Scale(transform.forward, dashDistance * new Vector3((Mathf.Log(1f / (Time.deltaTime * Drag.x + 1)) / -Time.deltaTime), 0, (Mathf.Log(1f / (Time.deltaTime * Drag.z + 1)) / -Time.deltaTime)));
+        isDashing = true;
+        yield return new WaitForSeconds(dashCooldown);
+        isDashing = false;
+    }// END IEnumerator Dash
 }
