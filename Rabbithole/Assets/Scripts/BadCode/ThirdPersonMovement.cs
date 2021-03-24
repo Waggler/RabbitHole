@@ -93,7 +93,7 @@ public class ThirdPersonMovement : MonoBehaviour
         }
 
         // Handles Dashing Logic
-        if (Input.GetKeyDown(KeyCode.LeftShift) && isDashing == false && isGrounded)
+        if (Input.GetButtonDown("DashButton") && isDashing == false && isGrounded) // Jordan changed the input to "DashButton" now works with controller and Keyboard.
         {
             Debug.Log("Dash");
             StartCoroutine(Dash());

@@ -11,13 +11,14 @@ public class GunScript : MonoBehaviour
     public float clipSize;
     public float ammoCount;
     public float reloadTime;
-    private float fireRate = 15f;
+    private float fireRate = 1f;
     private float nextTimeToFire = 1f;
 
     public bool reloading;
 
     public AudioSource audioSource;
     public AudioClip gunShot;
+    public AudioClip reloadSound;
 
 
     public Camera fpsCam;
@@ -38,7 +39,8 @@ public class GunScript : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire && ammoCount <= clipSize && reloading == false)
+        float controllerShooting = Input.GetAxis("RT"); // Jordan Added this. This makes the Controller Trigger useable
+        if (controllerShooting >= 1 && Time.time >= nextTimeToFire && ammoCount <= clipSize && reloading == false|| Input.GetButton("Fire1") && Time.time >= nextTimeToFire && ammoCount <= clipSize && reloading == false) // Jordan changed this to use controller shooting and fire1 mouse shooting
         {
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
@@ -48,8 +50,9 @@ public class GunScript : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.R) && reloading == false)
+        if (Input.GetButtonDown("Reload") && reloading == false) // this used to be Input.GetKeyDown(KeyCode.R)  now it works with both controller and keyboard
         {
+            audioSource.PlayOneShot(reloadSound, 0.7f); // Jordan Added this
             StartCoroutine(routine: Reload());
         }
 
