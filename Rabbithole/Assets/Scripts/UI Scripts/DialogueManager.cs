@@ -30,7 +30,7 @@ public class DialogueManager : MonoBehaviour
         {
             DisplayNextSentence();
         }
-    }
+    }// END Update
 
     // Starts dialogue
     public void StartDialogue(Dialogue dialogue)
@@ -53,7 +53,7 @@ public class DialogueManager : MonoBehaviour
 
         DisplayNextSentence();
 
-    }
+    }// END StartDialogue
 
     public void DisplayNextSentence()
     {
@@ -79,7 +79,7 @@ public class DialogueManager : MonoBehaviour
             dialogueText.text += letter;
             yield return null;
         }
-    }
+    }// END TypeSentence
 
     void EndDialogue()
     {

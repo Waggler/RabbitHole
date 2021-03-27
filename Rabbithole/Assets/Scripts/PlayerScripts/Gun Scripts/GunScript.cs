@@ -13,34 +13,35 @@ public class GunScript : MonoBehaviour
     public float reloadTime;
     private float fireRate = 1f;
     private float nextTimeToFire = 1f;
-
     public bool reloading;
+    public Camera fpsCam;
 
+    [Header("Audio")]
     public AudioSource audioSource;
     public AudioClip gunShot;
     public AudioClip reloadSound;
 
 
-    public Camera fpsCam;
-
-    [SerializeField]
-    //private Transform firePoint;
-
+    /*
     private void Start()
     {
         Init();
-    }
+    }// END Start
 
 
     public void Init()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-    }
+        //Cursor.lockState = CursorLockMode.Locked;
+    }// END Init
+    */ // Lock Cursor Script Not Used
 
     void Update()
     {
-        float controllerShooting = Input.GetAxis("RT"); // Jordan Added this. This makes the Controller Trigger useable
-        if (controllerShooting >= 1 && Time.time >= nextTimeToFire && ammoCount <= clipSize && reloading == false|| Input.GetButton("Fire1") && Time.time >= nextTimeToFire && ammoCount <= clipSize && reloading == false) // Jordan changed this to use controller shooting and fire1 mouse shooting
+        //This makes the Controller Trigger useable
+        float controllerShooting = Input.GetAxis("RT");
+
+        // changed to use controller shooting and fire1 mouse shooting
+        if (controllerShooting >= 1 && Time.time >= nextTimeToFire && ammoCount <= clipSize && reloading == false|| Input.GetButton("Fire1") && Time.time >= nextTimeToFire && ammoCount <= clipSize && reloading == false)
         {
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
@@ -50,13 +51,14 @@ public class GunScript : MonoBehaviour
 
         }
 
-        if (Input.GetButtonDown("Reload") && reloading == false && ammoCount > 0) // this used to be Input.GetKeyDown(KeyCode.R)  now it works with both controller and keyboard
+        // this used to be Input.GetKeyDown(KeyCode.R)  now it works with both controller and keyboard
+        if (Input.GetButtonDown("Reload") && reloading == false && ammoCount > 0)
         {
-            audioSource.PlayOneShot(reloadSound, 0.7f); // Jordan Added this
+            audioSource.PlayOneShot(reloadSound, 0.7f);
             StartCoroutine(routine: Reload());
         }
+    }// END Update
 
-    }
     void Shoot()
     {
         Debug.DrawRay(fpsCam.transform.position, fpsCam.transform.forward * 100, Color.red, 2f);
@@ -73,12 +75,13 @@ public class GunScript : MonoBehaviour
                 target.TakeDamage(damage);
             }
 
+            // This allows the gun to push back rigidbodies when hit
             if (hit.rigidbody != null)
             {
                 hit.rigidbody.AddForce(-hit.normal * impactForce);
             }
         }
-    }
+    }// END Shoot
 
     IEnumerator Reload()
     {
@@ -86,5 +89,5 @@ public class GunScript : MonoBehaviour
         yield return new WaitForSeconds(reloadTime);
         ammoCount = 0;
         reloading = false;
-    }
+    }// END Reload
 }

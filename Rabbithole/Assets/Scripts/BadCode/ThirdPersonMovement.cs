@@ -14,25 +14,30 @@ public class ThirdPersonMovement : MonoBehaviour
     public float speed = 6f;
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
-    public float dashDistance = 3f;
-    public float dashCooldown = 2f;
     public bool isGrounded;
-    public bool isGliding;
-    public bool isDashing;
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
-
     Vector3 velocity;
+
+    [Header("Dash Settings")]
+    public bool isDashing;
+    public float dashDistance = 3f;
+    public float dashCooldown = 2f;
     public Vector3 Drag;
 
+    [Header("Glide Settings")]
+    public bool isGliding;
     public float waitTime = 0.35f;
-    public float timer = 0.0f;
+    public float glideTimer = 0.0f;
 
+
+    // Locks Cursor
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
-    }
+    }// END Start
+
 
     void Update()
     {
@@ -64,13 +69,14 @@ public class ThirdPersonMovement : MonoBehaviour
             
         }
 
+        // Resets Glide Timer
         if (!isGrounded)
         {
-            timer += Time.deltaTime;
+            glideTimer += Time.deltaTime;
         }
 
         // Handles Gliding Logic
-        if (Input.GetButtonDown("Jump") && !isGrounded && timer > waitTime)
+        if (Input.GetButtonDown("Jump") && !isGrounded && glideTimer > waitTime)
         {
             if (!isGliding)
             {
@@ -89,7 +95,7 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             gravity = -30;
             isGliding = false;
-            timer = 0;
+            glideTimer = 0;
         }
 
         // Handles Dashing Logic

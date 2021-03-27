@@ -16,11 +16,11 @@ public class Target : MonoBehaviour
         {
             Die();
         }
-    }
+    }// END TakeDamage
 
     void Die()
     {
         gameObject.SetActive(false);
-    }
+    }// END DIE
 
 }
