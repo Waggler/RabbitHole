@@ -28,7 +28,6 @@ public class ThirdPersonMovement : MonoBehaviour
 
     public float waitTime = 0.35f;
     public float timer = 0.0f;
-
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -114,4 +113,5 @@ public class ThirdPersonMovement : MonoBehaviour
         yield return new WaitForSeconds(dashCooldown);
         isDashing = false;
     }// END IEnumerator Dash
+
 }
