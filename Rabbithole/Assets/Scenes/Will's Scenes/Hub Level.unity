@@ -14,10 +14,10 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.58584905, g: 0.6509434, b: 0.6509434, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.02
+  m_FogDensity: 0.005
   m_LinearFogStart: 10
   m_LinearFogEnd: 1000
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -396,7 +396,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 2.508391, y: 1}
+    m_SensorSize: {x: 2.430622, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -690,8 +690,8 @@ MonoBehaviour:
   dialogue:
     name: Jacklyn Rabot
     sentences:
-    - Wake the fuck up Gunny.
-    - We got foxes to burn.
+    - Welcome to the beta build of Gunny's Gun Run!
+    - To start the level, head over to the rabbithole to your left, closest to me!
 --- !u!65 &503903777
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1525,7 +1525,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 801592099}
-  m_LocalRotation: {x: 0.04046276, y: -0.10217927, z: -0.004159687, w: -0.99393404}
+  m_LocalRotation: {x: 0.040475428, y: -0.0991057, z: -0.0040345653, w: -0.99424523}
   m_LocalPosition: {x: -16.86, y: 2.907143, z: -16.985428}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2074,7 +2074,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 2.508391, y: 1}
+    m_SensorSize: {x: 2.430622, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2090,8 +2090,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1093273440}
-  m_LocalRotation: {x: -0.040462743, y: 0.10217927, z: 0.0041596857, w: 0.99393404}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.040475436, y: 0.09910569, z: 0.0040345658, w: 0.99424523}
+  m_LocalPosition: {x: 0, y: 0.00000023841858, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1240019664}
@@ -3051,15 +3051,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1426481038}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.1957884, y: -1.0208484, z: 7.300146}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 372509301}
   - {fileID: 1850890648}
   - {fileID: 1940254805}
-  m_Father: {fileID: 2052000929}
-  m_RootOrder: 2
+  m_Father: {fileID: 1926154476}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1440690629
 GameObject:
@@ -3413,7 +3413,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 2.508391, y: 1}
+    m_SensorSize: {x: 2.430622, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -3429,8 +3429,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1650888174}
-  m_LocalRotation: {x: -0.040462732, y: 0.10217926, z: 0.0041596843, w: 0.99393404}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.040475424, y: 0.099105686, z: 0.004034562, w: 0.99424523}
+  m_LocalPosition: {x: 0, y: 0.00000023841858, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 120780151}
@@ -3721,7 +3721,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.756562, y: 2.5581388, z: -11.424681}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1426481039}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3737,9 +3738,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a3575748d8d40f44a8ba8595abe366d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beachTrigger: {fileID: 0}
-  burrowTrigger: {fileID: 0}
-  mountainTrigger: {fileID: 0}
+  beachTrigger: {fileID: 1940254804}
+  burrowTrigger: {fileID: 372509300}
+  mountainTrigger: {fileID: 1850890647}
 --- !u!1 &1940254804
 GameObject:
   m_ObjectHideFlags: 0
@@ -3837,7 +3838,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 2.508391, y: 1}
+    m_SensorSize: {x: 2.430622, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -3853,8 +3854,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1977479432}
-  m_LocalRotation: {x: -0.040462743, y: 0.10217927, z: 0.0041596857, w: 0.99393404}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.040475436, y: 0.09910569, z: 0.0040345658, w: 0.99424523}
+  m_LocalPosition: {x: 0, y: 0.00000023841858, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1440690630}
@@ -3971,7 +3972,6 @@ Transform:
   m_Children:
   - {fileID: 1848898648}
   - {fileID: 1376306799}
-  - {fileID: 1426481039}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
