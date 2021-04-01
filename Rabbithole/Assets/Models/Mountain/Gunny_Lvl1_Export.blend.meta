@@ -1,9 +1,49 @@
 fileFormatVersion: 2
-guid: f57127cfcc32ab9419af130b6a9211fb
+guid: 86c8d29d238a8f14390aec48ee8ced0c
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hub_Asset_MAT
+    second: {fileID: 2100000, guid: 954cc99887e9ed94ab2ab54c040a2a6a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LVL1_Scene_Asssets_MAT
+    second: {fileID: 2100000, guid: 3c5cd3ca5f05db54b98d3ea1c1f5e009, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mounatin_Color
+    second: {fileID: 2100000, guid: 64afde2c456b2804bb065ddd00afb4fe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mountain_Floor
+    second: {fileID: 2100000, guid: 77d7d4787f2fc9844b08a255116520d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rock_MAT_2
+    second: {fileID: 2100000, guid: 0c890d2718ac0594da61994a8d95c675, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grass_MAT
+    second: {fileID: 2100000, guid: 027f89032ff13544d9a8f4c04ca2490a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hanging_moss_MAT
+    second: {fileID: 2100000, guid: ee41345b9c9319a48bece519bf6ffea0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: watchtower_MAT
+    second: {fileID: 2100000, guid: 9701b7765aad57244821ddc66f9dcb09, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
