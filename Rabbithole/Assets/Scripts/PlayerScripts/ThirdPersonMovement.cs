@@ -11,7 +11,9 @@ public class ThirdPersonMovement : MonoBehaviour
     float turnSmoothVelocity;
 
     [Header("Movement Settings")]
-    public float speed = 6f;
+    private float speed = 6f;
+    public float groundSpeed = 6f;
+    public float glideSpeed = 12f;
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
     public float bounceHeight = 2000000f;
@@ -80,12 +82,14 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             if (!isGliding)
             {
-                gravity = -10;
+                speed = glideSpeed;
+                gravity = -5;
                 isGliding = true;
             }
             else if (isGliding == true)
             {
-                gravity = -100;
+                speed = groundSpeed;
+                gravity = -30;
                 isGliding = false;
             }
         }
@@ -93,6 +97,7 @@ public class ThirdPersonMovement : MonoBehaviour
         // Handles Resetting Glide
         if (isGrounded == true)
         {
+            speed = groundSpeed;
             gravity = -30;
             isGliding = false;
             glideTimer = 0;
@@ -130,6 +135,7 @@ public class ThirdPersonMovement : MonoBehaviour
         }
 
     }*/
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Mole"))
