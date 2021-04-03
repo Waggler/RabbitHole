@@ -24,11 +24,6 @@ public class FoxGoonie : MonoBehaviour
     public float sightRadius, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
-    public void Update()
-    {
-
-    }
-
     private void Patrolling()
     {
 
