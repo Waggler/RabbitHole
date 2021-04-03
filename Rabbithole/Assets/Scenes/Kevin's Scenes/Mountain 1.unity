@@ -124,7 +124,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: d439a5be9a374454f899fdef9207b68f, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 8724b46ad92e1ea4ba5a6cc65f6d4aca, type: 2}
 --- !u!1001 &21182294
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -668,7 +668,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 57275429}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1971,7 +1971,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 186160259}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Groundcheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4132,7 +4132,7 @@ GameObject:
   - component: {fileID: 437936965}
   - component: {fileID: 437936967}
   - component: {fileID: 437936966}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5082,7 +5082,7 @@ GameObject:
   - component: {fileID: 543227472}
   - component: {fileID: 543227473}
   - component: {fileID: 543227474}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -6628,36 +6628,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 693269601}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &700753813
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 700753814}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &700753814
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 700753813}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -129.68375, y: -38.28405, z: -1870.5643}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &705742308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6924,7 +6894,7 @@ GameObject:
   - component: {fileID: 748862756}
   - component: {fileID: 748862758}
   - component: {fileID: 748862757}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: PlayerBean
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10123,7 +10093,7 @@ GameObject:
   - component: {fileID: 1068381525}
   - component: {fileID: 1068381527}
   - component: {fileID: 1068381526}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12149,7 +12119,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1246243835}
   m_LocalRotation: {x: -0, y: 0.49208242, z: -0, w: 0.87054867}
-  m_LocalPosition: {x: 60.75, y: 31.95, z: -6.94}
+  m_LocalPosition: {x: 60.75, y: 31.99, z: -6.94}
   m_LocalScale: {x: 1.4354, y: 1.7111404, z: 1.4354}
   m_Children:
   - {fileID: 1620396919}
@@ -12172,10 +12142,10 @@ NavMeshAgent:
   m_AngularSpeed: 120
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
+  m_AutoBraking: 0
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 0
+  m_BaseOffset: 1.7
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &1246243838
@@ -12190,20 +12160,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aaea55d2acc25f41b7a117c79ec1d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 0}
-  player: {fileID: 0}
+  agent: {fileID: 1246243837}
+  player: {fileID: 543227469}
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8192
   walkPoint: {x: 0, y: 0, z: 0}
-  walkPointRange: 0
-  timeBetweenAttacks: 0
-  projectile: {fileID: 0}
-  sightRange: 0
-  attackRange: 0
+  walkPointRange: 5
+  timeBetweenAttacks: 0.5
+  projectile: {fileID: 8857687125477280287, guid: 3534d3d0a01e839468a3d746c727c76b,
+    type: 3}
+  sightRange: 100
+  attackRange: 40
   playerInSightRange: 0
   playerInAttackRange: 0
 --- !u!1001 &1250451881
@@ -19739,7 +19710,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2135453572}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Camera Follow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
