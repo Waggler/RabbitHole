@@ -5143,6 +5143,8 @@ MonoBehaviour:
   bounceWaitTime: 0.35
   glideTimer: 0
   bounced: 0
+  hitPoints: 100
+  damageTaken: 10
 --- !u!143 &543227471
 CharacterController:
   m_ObjectHideFlags: 0
@@ -10849,7 +10851,7 @@ PrefabInstance:
     - target: {fileID: 4261571334111649002, guid: 7101f8ba97dd51349892e091b48718f0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4261571334111649002, guid: 7101f8ba97dd51349892e091b48718f0,
         type: 3}
@@ -21074,5 +21076,5 @@ Transform:
   m_LocalScale: {x: 0.22, y: 0.22, z: 0.95}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

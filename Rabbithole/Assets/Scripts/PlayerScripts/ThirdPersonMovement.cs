@@ -37,6 +37,9 @@ public class ThirdPersonMovement : MonoBehaviour
     public float glideTimer = 0.0f;
     public bool bounced;
 
+    [Header("Health Settings")]
+    public float hitPoints;
+    public float damageTaken;
 
     // Locks Cursor
     private void Start()
@@ -139,6 +142,11 @@ public class ThirdPersonMovement : MonoBehaviour
         velocity.x /= 1 + Drag.x * Time.deltaTime;
         velocity.y /= 1 + Drag.y * Time.deltaTime;
         velocity.z /= 1 + Drag.z * Time.deltaTime;
+
+        if (hitPoints <= 0)
+        {
+            gameObject.SetActive(false);
+        }
     }// END Update
 
     private IEnumerator Dash()
@@ -171,6 +179,11 @@ public class ThirdPersonMovement : MonoBehaviour
             velocity.y = Mathf.Sqrt(bounceHeight * -10f * gravity);
             
             //PlayerBall.AddForce(Vector3.up * BouncingForce);
+        }
+
+        if (other.CompareTag("Bullet"))
+        {
+            hitPoints -= damageTaken;
         }
     }
 }
