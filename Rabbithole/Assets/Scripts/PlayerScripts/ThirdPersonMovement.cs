@@ -14,11 +14,12 @@ public class ThirdPersonMovement : MonoBehaviour
     public float speed = 6f;
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
+    public float bounceHeight = 2000000f;
     public bool isGrounded;
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
-    Vector3 velocity;
+    public Vector3 velocity;
 
     [Header("Dash Settings")]
     public bool isDashing;
@@ -66,7 +67,6 @@ public class ThirdPersonMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-            
         }
 
         // Resets Glide Timer
@@ -85,7 +85,7 @@ public class ThirdPersonMovement : MonoBehaviour
             }
             else if (isGliding == true)
             {
-                gravity = -30;
+                gravity = -100;
                 isGliding = false;
             }
         }
@@ -120,4 +120,23 @@ public class ThirdPersonMovement : MonoBehaviour
         yield return new WaitForSeconds(dashCooldown);
         isDashing = false;
     }// END IEnumerator Dash
+
+    /*private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Mole"))
+        {
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            Debug.Log("Bounce");
+        }
+
+    }*/
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Mole"))
+        {
+            Debug.Log("Bounce");
+            velocity.y = Mathf.Sqrt(bounceHeight * -10f * gravity);
+            //PlayerBall.AddForce(Vector3.up * BouncingForce);
+        }
+    }
 }
