@@ -2291,10 +2291,11 @@ MonoBehaviour:
   controller: {fileID: 543227471}
   cam: {fileID: 801592102}
   turnSmoothTime: 0.1
-  speed: 10
+  groundSpeed: 10
+  glideSpeed: 12
   gravity: -30
   jumpHeight: 3
-  bounceHeight: 10
+  bounceHeight: 20
   isGrounded: 0
   groundCheck: {fileID: 186160259}
   groundDistance: 0.4
@@ -3490,7 +3491,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 801592099}
-  m_LocalRotation: {x: 0.040567383, y: -0.07297349, z: -0.0029707286, w: -0.99650407}
+  m_LocalRotation: {x: 0.040567383, y: -0.07297348, z: -0.002970728, w: -0.99650407}
   m_LocalPosition: {x: -159.09, y: -39.307873, z: -1955.8754}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -5032,7 +5033,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1093273440}
-  m_LocalRotation: {x: -0.04056743, y: 0.07297349, z: 0.0029707323, w: 0.99650407}
+  m_LocalRotation: {x: -0.04056739, y: 0.07297348, z: 0.0029707288, w: 0.99650407}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -7943,7 +7944,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1650888174}
-  m_LocalRotation: {x: -0.040567387, y: 0.07297348, z: 0.0029707286, w: 0.99650407}
+  m_LocalRotation: {x: -0.040567428, y: 0.07297349, z: 0.0029707323, w: 0.99650407}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
