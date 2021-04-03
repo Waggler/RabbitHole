@@ -11,14 +11,17 @@ public class ThirdPersonMovement : MonoBehaviour
     float turnSmoothVelocity;
 
     [Header("Movement Settings")]
-    public float speed = 6f;
+    private float speed = 6f;
+    public float groundSpeed = 6f;
+    public float glideSpeed = 12f;
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
+    public float bounceHeight = 2000000f;
     public bool isGrounded;
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
-    Vector3 velocity;
+    public Vector3 velocity;
 
     [Header("Dash Settings")]
     public bool isDashing;
@@ -66,7 +69,6 @@ public class ThirdPersonMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-            
         }
 
         // Resets Glide Timer
@@ -80,11 +82,13 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             if (!isGliding)
             {
-                gravity = -10;
+                speed = glideSpeed;
+                gravity = -5;
                 isGliding = true;
             }
             else if (isGliding == true)
             {
+                speed = groundSpeed;
                 gravity = -30;
                 isGliding = false;
             }
@@ -93,6 +97,7 @@ public class ThirdPersonMovement : MonoBehaviour
         // Handles Resetting Glide
         if (isGrounded == true)
         {
+            speed = groundSpeed;
             gravity = -30;
             isGliding = false;
             glideTimer = 0;
@@ -120,4 +125,24 @@ public class ThirdPersonMovement : MonoBehaviour
         yield return new WaitForSeconds(dashCooldown);
         isDashing = false;
     }// END IEnumerator Dash
+
+    /*private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Mole"))
+        {
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            Debug.Log("Bounce");
+        }
+
+    }*/
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Mole"))
+        {
+            Debug.Log("Bounce");
+            velocity.y = Mathf.Sqrt(bounceHeight * -10f * gravity);
+            //PlayerBall.AddForce(Vector3.up * BouncingForce);
+        }
+    }
 }
