@@ -43,6 +43,8 @@ public class ThirdPersonMovement : MonoBehaviour
     [Header("Health Settings")]
     public float hitPoints;
     public float damageTaken;
+
+    Animator animator;
     // Locks Cursor
     private void Start()
     {
@@ -52,6 +54,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
     void Update()
     {
+        animator = GetComponent<Animator>();
         // Gets input from player movement
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
@@ -77,6 +80,8 @@ public class ThirdPersonMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            animator.SetBool("isGrounded", false);
+            animator.SetBool("isJumping", true);
         }
 
         // Resets Glide Timer
@@ -93,12 +98,14 @@ public class ThirdPersonMovement : MonoBehaviour
                 speed = glideSpeed;
                 gravity = -5;
                 isGliding = true;
+                animator.SetBool("isGliding", true);
             }
             else if (isGliding == true)
             {
                 speed = groundSpeed;
                 gravity = -30;
                 isGliding = false;
+                animator.SetBool("isGliding", false);
             }
         }
 
@@ -110,6 +117,9 @@ public class ThirdPersonMovement : MonoBehaviour
             isGliding = false;
             glideTimer = 0;
             bounced = false;
+            animator.SetBool("isGrounded", true);
+            animator.SetBool("isJumping", false);
+            animator.SetBool("isGliding", false);
         }
 
         if (Input.GetButtonDown("Jump") && !isGrounded && glideTimer > bounceWaitTime && bounced == true)
@@ -119,12 +129,14 @@ public class ThirdPersonMovement : MonoBehaviour
                 speed = glideSpeed;
                 gravity = -5;
                 isGliding = true;
+                animator.SetBool("isGliding", true);
             }
             else if (isGliding == true)
             {
                 speed = groundSpeed;
                 gravity = -30;
                 isGliding = false;
+                animator.SetBool("isGliding", false);
             }
         }
 
@@ -149,6 +161,16 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        {
+            animator.SetBool("isMoving", true);
+        }
+        else
+        {
+            animator.SetBool("isMoving", false);
+        }
+
     }// END Update
 
     private IEnumerator Dash()
@@ -179,7 +201,7 @@ public class ThirdPersonMovement : MonoBehaviour
             gravity = -30;
             isGliding = false;
             velocity.y = Mathf.Sqrt(bounceHeightOne * -10f * gravity);
-            
+
             //PlayerBall.AddForce(Vector3.up * BouncingForce);
         }
 
