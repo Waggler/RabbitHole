@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Shootable
+  - Fire
+  - Mole
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -19,7 +22,7 @@ TagManager:
   - Postprocessing
   - Prop
   - Obstacle
-  - 
+  - WhatIsPlayer
   - 
   - 
   - 
