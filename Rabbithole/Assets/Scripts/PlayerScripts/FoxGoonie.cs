@@ -21,6 +21,8 @@ public class FoxGoonie : MonoBehaviour
     bool alreadyAttacked;
 
     public GameObject projectile;
+    public float projectileHorizontalForce = 32f;
+    public float projectileVerticalForce = 4f;
 
     //States
     public float sightRange, attackRange;
@@ -88,8 +90,8 @@ public class FoxGoonie : MonoBehaviour
         {
             //Attack Code
             Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();//This Can be changed for the bullet to come at a specific position
-            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 4f, ForceMode.Impulse);
+            rb.AddForce(transform.forward * projectileHorizontalForce, ForceMode.Impulse);
+            rb.AddForce(transform.up * projectileVerticalForce, ForceMode.Impulse);
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);

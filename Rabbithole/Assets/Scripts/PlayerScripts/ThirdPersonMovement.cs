@@ -43,7 +43,6 @@ public class ThirdPersonMovement : MonoBehaviour
     [Header("Health Settings")]
     public float hitPoints;
     public float damageTaken;
-
     // Locks Cursor
     private void Start()
     {
