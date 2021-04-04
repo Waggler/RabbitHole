@@ -41,18 +41,18 @@ public class GunScript : MonoBehaviour
         float controllerShooting = Input.GetAxis("RT");
 
         // changed to use controller shooting and fire1 mouse shooting
-        if (controllerShooting >= 1 && Time.time >= nextTimeToFire && ammoCount <= clipSize && reloading == false|| Input.GetButton("Fire1") && Time.time >= nextTimeToFire && ammoCount <= clipSize && reloading == false)
+        if (controllerShooting >= 1 && Time.time >= nextTimeToFire && GameManager.Instance.ammo > 0 && GameManager.Instance.isReloading == false|| Input.GetButton("Fire1") && Time.time >= nextTimeToFire && GameManager.Instance.ammo > 0 && GameManager.Instance.isReloading == false)
         {
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
-            ammoCount += 1;
-
+            GameManager.Instance.ammo -= 1;
+            GameManager.Instance.ammoUI.SetInteger("ammoAmount", GameManager.Instance.ammo);
             audioSource.PlayOneShot(gunShot, 0.7f);
 
         }
 
         // this used to be Input.GetKeyDown(KeyCode.R)  now it works with both controller and keyboard
-        if (Input.GetButtonDown("Reload") && reloading == false && ammoCount > 0)
+        if (Input.GetButtonDown("Reload") && GameManager.Instance.isReloading == false && ammoCount < 9)
         {
             audioSource.PlayOneShot(reloadSound, 0.7f);
             StartCoroutine(routine: Reload());
@@ -85,9 +85,10 @@ public class GunScript : MonoBehaviour
 
     IEnumerator Reload()
     {
-        reloading = true;
+        GameManager.Instance.isReloading = true;
         yield return new WaitForSeconds(reloadTime);
-        ammoCount = 0;
-        reloading = false;
+        GameManager.Instance.ammo = GameManager.Instance.maxAmmo;
+        GameManager.Instance.ammoUI.SetInteger("ammoAmount", GameManager.Instance.ammo);
+        GameManager.Instance.isReloading = false;
     }// END Reload
 }

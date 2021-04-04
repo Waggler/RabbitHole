@@ -10,12 +10,17 @@ public class CheckpointSetter : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
+        {
+            if (GameManager.Instance.health > 0)
             {
-            respawnManager.respawnPoint = respawnPoint.transform.position;
-            this.gameObject.SetActive(false);
+                respawnManager.respawnPoint = respawnPoint.transform.position;
+                this.gameObject.SetActive(false);
             }
-                else
-                    //GameManager.Instance.Die();
-                    return;
-            }
+            else
+                //GameManager.Instance.Die();
+                return;
+        }
+        else
+            return;
     }
+}
