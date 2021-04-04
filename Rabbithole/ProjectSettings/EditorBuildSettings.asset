@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Will's Scenes/Mountain.unity
     guid: fc6b692c7a5a4004590e81b8d1287ab0
+  - enabled: 1
+    path: Assets/Scenes/Will's Scenes/Win Screen.unity
+    guid: 4615777b38101414781b2c16acb79b2a
   m_configObjects: {}

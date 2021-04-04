@@ -4,13 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class WinScreen : MonoBehaviour
+public class EndScreen : MonoBehaviour
 {
 
     public void MainMenu()
     {
         Debug.Log("Back to the Menu");
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Main Menu");
     }
 
     public void QuitGame()
