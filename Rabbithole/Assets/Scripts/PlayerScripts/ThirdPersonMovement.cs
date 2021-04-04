@@ -45,6 +45,7 @@ public class ThirdPersonMovement : MonoBehaviour
     public float damageTaken;
 
     Animator animator;
+    public Animator moleAnimator;
     // Locks Cursor
     private void Start()
     {
@@ -80,8 +81,9 @@ public class ThirdPersonMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-            animator.SetBool("isGrounded", false);
             animator.SetBool("isJumping", true);
+            animator.SetBool("isGrounded", false);
+
         }
 
         // Resets Glide Timer
@@ -196,22 +198,25 @@ public class ThirdPersonMovement : MonoBehaviour
         if (other.CompareTag("Mole1"))
         {
             Debug.Log("Bounce");
+            moleAnimator.SetBool("IsJumpedOn", true);
             bounced = true;
             speed = groundSpeed;
             gravity = -30;
             isGliding = false;
             velocity.y = Mathf.Sqrt(bounceHeightOne * -10f * gravity);
-
+            StartCoroutine(MoleReset());
             //PlayerBall.AddForce(Vector3.up * BouncingForce);
         }
 
         if (other.CompareTag("Mole2"))
         {
             Debug.Log("Bounce2");
+            moleAnimator.SetBool("IsJumpedOn", true);
             bounced = true;
             speed = groundSpeed;
             gravity = -30;
             isGliding = false;
+            StartCoroutine(MoleReset());
             velocity.y = Mathf.Sqrt(bounceHeightTwo * -10f * gravity);
 
             //PlayerBall.AddForce(Vector3.up * BouncingForce);
@@ -220,10 +225,12 @@ public class ThirdPersonMovement : MonoBehaviour
         if (other.CompareTag("Mole3"))
         {
             Debug.Log("Bounce3");
+            moleAnimator.SetBool("IsJumpedOn", true);
             bounced = true;
             speed = groundSpeed;
             gravity = -30;
             isGliding = false;
+            StartCoroutine(MoleReset());
             velocity.y = Mathf.Sqrt(bounceHeightThird * -10f * gravity);
 
             //PlayerBall.AddForce(Vector3.up * BouncingForce);
@@ -231,10 +238,12 @@ public class ThirdPersonMovement : MonoBehaviour
         if (other.CompareTag("Mole4"))
         {
             Debug.Log("Bounce4");
+            moleAnimator.SetBool("IsJumpedOn", true);
             bounced = true;
             speed = groundSpeed;
             gravity = -30;
             isGliding = false;
+            StartCoroutine(MoleReset());
             velocity.y = Mathf.Sqrt(bounceHeightFour * -10f * gravity);
 
             //PlayerBall.AddForce(Vector3.up * BouncingForce);
@@ -243,6 +252,11 @@ public class ThirdPersonMovement : MonoBehaviour
         if (other.CompareTag("Bullet"))
         {
             hitPoints -= damageTaken;
+        }
+        IEnumerator MoleReset()
+        {
+            yield return new WaitForSeconds(3);
+            moleAnimator.SetBool("IsJumpedOn", false);
         }
     }
 }
