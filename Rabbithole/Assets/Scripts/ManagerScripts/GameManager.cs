@@ -9,8 +9,8 @@ public class GameManager : MonoBehaviour
 
     [Header("Player Settings")]
     public GameObject player;
-    private int maxHealth = 8;
-    public int health;
+    private float maxHealth = 8;
+    public float health;
 
     [Header("Level Completion")]
     public bool tutComplete = false;

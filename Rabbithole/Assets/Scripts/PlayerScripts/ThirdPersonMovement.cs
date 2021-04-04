@@ -46,6 +46,8 @@ public class ThirdPersonMovement : MonoBehaviour
 
     Animator animator;
     public Animator moleAnimator;
+    public GameObject starsBonk;
+    public GameObject[] starsBonks = new GameObject[4];
     // Locks Cursor
     private void Start()
     {
@@ -251,12 +253,14 @@ public class ThirdPersonMovement : MonoBehaviour
 
         if (other.CompareTag("Bullet"))
         {
-            hitPoints -= damageTaken;
+            GameManager.Instance.health -= damageTaken;
         }
         IEnumerator MoleReset()
         {
+            starsBonk.SetActive(true);
             yield return new WaitForSeconds(3);
             moleAnimator.SetBool("IsJumpedOn", false);
+                starsBonk.SetActive(false);
         }
     }
 }
