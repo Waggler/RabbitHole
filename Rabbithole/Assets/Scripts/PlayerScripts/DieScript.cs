@@ -17,4 +17,5 @@ public class DieScript : MonoBehaviour
         yield return new WaitForSeconds(lifeTime);
         Destroy(gameObject);
     }
+
 }
