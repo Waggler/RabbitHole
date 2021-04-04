@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8b7fe782c0ac3b546a61cca41547b09e
+guid: 9cb0650ebca8b4b4e8254b83b95271ab
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable:
@@ -9,6 +9,9 @@ ModelImporter:
   - first:
       74: -38725429884586413
     second: Gunny_Armature|Gunny_fireAnim
+  - first:
+      74: -7275239503704889176
+    second: Gunny_Armature|Gunny_hoverAnim
   - first:
       74: -7406491340986664726
     second: Gunny_Armature|Gunny_idleAnim
@@ -27,17 +30,7 @@ ModelImporter:
   - first:
       74: -2589371723835705885
     second: Gunny_Armature|Gunny_walkAnim
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: checker_MAT
-    second: {fileID: 2100000, guid: a2c4edfe741ab5a4da378be1f9b7169f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: weapon_cache_1_MAT
-    second: {fileID: 2100000, guid: b6f098cc3b55e014b8325419368223a4, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -124,6 +117,35 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
+      name: Gunny_Armature|Gunny_hoverAnim
+      takeName: Gunny_Armature|Gunny_hoverAnim
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 16
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
       name: Gunny_Armature|Gunny_idleAnim
       takeName: Gunny_Armature|Gunny_idleAnim
       internalID: 0
@@ -135,7 +157,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -280,7 +302,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -352,7 +374,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: Origin
+    rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
@@ -360,7 +382,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
