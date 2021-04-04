@@ -13,6 +13,10 @@ public class MenuScript : MonoBehaviour
         Debug.Log("Play!");
     }
 
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
     public void QuitGame()
     {
         Application.Quit();
