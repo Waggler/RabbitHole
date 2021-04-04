@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4923454231682703337}
   - component: {fileID: 8463258575230048074}
   - component: {fileID: 3400422953759823246}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4784247405798516260}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalRotation: {x: -0.7069834, y: 0, z: 0, w: 0.7072302}
   m_LocalPosition: {x: -931.33, y: 604.2, z: -1382.87}
   m_LocalScale: {x: 2.85, y: 2.85, z: 3.9}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
 --- !u!33 &4923454231682703337
 MeshFilter:
   m_ObjectHideFlags: 0

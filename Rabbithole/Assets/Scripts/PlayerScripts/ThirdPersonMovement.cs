@@ -17,6 +17,7 @@ public class ThirdPersonMovement : MonoBehaviour
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
     public float bounceHeight = 2000000f;
+    public float walkingfallRate = -20f;
     public bool isGrounded;
     public Transform groundCheck;
     public float groundDistance = 0.4f;
@@ -32,8 +33,13 @@ public class ThirdPersonMovement : MonoBehaviour
     [Header("Glide Settings")]
     public bool isGliding;
     public float waitTime = 0.35f;
+    public float bounceWaitTime = 5f;
     public float glideTimer = 0.0f;
+    public bool bounced;
 
+    [Header("Health Settings")]
+    public float hitPoints;
+    public float damageTaken;
 
     // Locks Cursor
     private void Start()
@@ -78,7 +84,7 @@ public class ThirdPersonMovement : MonoBehaviour
         }
 
         // Handles Gliding Logic
-        if (Input.GetButtonDown("Jump") && !isGrounded && glideTimer > waitTime)
+        if (Input.GetButtonDown("Jump") && !isGrounded && glideTimer > waitTime && bounced == false)
         {
             if (!isGliding)
             {
@@ -101,6 +107,23 @@ public class ThirdPersonMovement : MonoBehaviour
             gravity = -30;
             isGliding = false;
             glideTimer = 0;
+            bounced = false;
+        }
+
+        if (Input.GetButtonDown("Jump") && !isGrounded && glideTimer > bounceWaitTime && bounced == true)
+        {
+            if (!isGliding)
+            {
+                speed = glideSpeed;
+                gravity = -5;
+                isGliding = true;
+            }
+            else if (isGliding == true)
+            {
+                speed = groundSpeed;
+                gravity = -30;
+                isGliding = false;
+            }
         }
 
         // Handles Dashing Logic
@@ -111,11 +134,19 @@ public class ThirdPersonMovement : MonoBehaviour
         }
 
         // Handles Gravity and Dash Physics
-        velocity.y += gravity * Time.deltaTime;
+        if (velocity.y > walkingfallRate)
+        {
+            velocity.y += gravity * Time.deltaTime;
+        }
         controller.Move(velocity * Time.deltaTime);
         velocity.x /= 1 + Drag.x * Time.deltaTime;
         velocity.y /= 1 + Drag.y * Time.deltaTime;
         velocity.z /= 1 + Drag.z * Time.deltaTime;
+
+        if (hitPoints <= 0)
+        {
+            gameObject.SetActive(false);
+        }
     }// END Update
 
     private IEnumerator Dash()
@@ -141,8 +172,18 @@ public class ThirdPersonMovement : MonoBehaviour
         if (other.CompareTag("Mole"))
         {
             Debug.Log("Bounce");
+            bounced = true;
+            speed = groundSpeed;
+            gravity = -30;
+            isGliding = false;
             velocity.y = Mathf.Sqrt(bounceHeight * -10f * gravity);
+            
             //PlayerBall.AddForce(Vector3.up * BouncingForce);
+        }
+
+        if (other.CompareTag("Bullet"))
+        {
+            hitPoints -= damageTaken;
         }
     }
 }
