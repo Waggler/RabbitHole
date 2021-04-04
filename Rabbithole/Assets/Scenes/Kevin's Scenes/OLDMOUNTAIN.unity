@@ -2295,7 +2295,10 @@ MonoBehaviour:
   glideSpeed: 12
   gravity: -30
   jumpHeight: 3
-  bounceHeight: 20
+  bounceHeightOne: 10
+  bounceHeightTwo: 20
+  bounceHeightThird: 1000
+  bounceHeightFour: 2000000
   walkingfallRate: -20
   isGrounded: 0
   groundCheck: {fileID: 186160259}
@@ -2313,6 +2316,8 @@ MonoBehaviour:
   bounceWaitTime: 4
   glideTimer: 0
   bounced: 0
+  hitPoints: 10
+  damageTaken: 0
 --- !u!143 &543227471
 CharacterController:
   m_ObjectHideFlags: 0
@@ -3022,7 +3027,7 @@ GameObject:
   - component: {fileID: 708747636}
   m_Layer: 0
   m_Name: MolePlaceholder
-  m_TagString: Mole
+  m_TagString: Mole4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3055,8 +3060,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fc7ab7438a6f0e4583b88da59ad0893, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BouncingForce: 2
-  Player: {fileID: 543227468}
 --- !u!1 &748862755
 GameObject:
   m_ObjectHideFlags: 0
@@ -5846,7 +5849,7 @@ GameObject:
   - component: {fileID: 1244591977}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Mole
+  m_TagString: Mole1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

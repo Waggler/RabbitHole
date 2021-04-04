@@ -8,6 +8,10 @@ TagManager:
   - Fire
   - Mole
   - Bullet
+  - Mole1
+  - Mole2
+  - Mole3
+  - Mole4
   layers:
   - Default
   - TransparentFX

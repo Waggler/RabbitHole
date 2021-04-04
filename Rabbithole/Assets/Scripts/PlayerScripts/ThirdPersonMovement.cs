@@ -16,7 +16,10 @@ public class ThirdPersonMovement : MonoBehaviour
     public float glideSpeed = 12f;
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
-    public float bounceHeight = 2000000f;
+    public float bounceHeightOne = 2000000f;
+    public float bounceHeightTwo = 2000000f;
+    public float bounceHeightThird = 2000000f;
+    public float bounceHeightFour = 2000000f;
     public float walkingfallRate = -20f;
     public bool isGrounded;
     public Transform groundCheck;
@@ -169,15 +172,50 @@ public class ThirdPersonMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Mole"))
+        if (other.CompareTag("Mole1"))
         {
             Debug.Log("Bounce");
             bounced = true;
             speed = groundSpeed;
             gravity = -30;
             isGliding = false;
-            velocity.y = Mathf.Sqrt(bounceHeight * -10f * gravity);
+            velocity.y = Mathf.Sqrt(bounceHeightOne * -10f * gravity);
             
+            //PlayerBall.AddForce(Vector3.up * BouncingForce);
+        }
+
+        if (other.CompareTag("Mole2"))
+        {
+            Debug.Log("Bounce2");
+            bounced = true;
+            speed = groundSpeed;
+            gravity = -30;
+            isGliding = false;
+            velocity.y = Mathf.Sqrt(bounceHeightTwo * -10f * gravity);
+
+            //PlayerBall.AddForce(Vector3.up * BouncingForce);
+        }
+
+        if (other.CompareTag("Mole3"))
+        {
+            Debug.Log("Bounce3");
+            bounced = true;
+            speed = groundSpeed;
+            gravity = -30;
+            isGliding = false;
+            velocity.y = Mathf.Sqrt(bounceHeightThird * -10f * gravity);
+
+            //PlayerBall.AddForce(Vector3.up * BouncingForce);
+        }
+        if (other.CompareTag("Mole4"))
+        {
+            Debug.Log("Bounce4");
+            bounced = true;
+            speed = groundSpeed;
+            gravity = -30;
+            isGliding = false;
+            velocity.y = Mathf.Sqrt(bounceHeightFour * -10f * gravity);
+
             //PlayerBall.AddForce(Vector3.up * BouncingForce);
         }
 
