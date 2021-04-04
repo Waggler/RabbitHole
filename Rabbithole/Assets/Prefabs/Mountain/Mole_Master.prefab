@@ -61,7 +61,7 @@ Transform:
   - {fileID: 2252442001707056568}
   m_Father: {fileID: 390078471855930697}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 17.255043, y: 74.81605, z: 0.8607006}
 --- !u!1 &1895251594562587758
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,9 +264,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2843570077736191463}
-  - component: {fileID: 3187901232594624350}
   - component: {fileID: 3187901232594624351}
   - component: {fileID: 3187901232594624348}
+  - component: {fileID: 1312060336}
+  - component: {fileID: 87573423801535035}
   m_Layer: 0
   m_Name: Mole_Master
   m_TagString: Mole1
@@ -290,20 +291,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &3187901232594624350
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3187901232594624349}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!54 &3187901232594624351
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -328,11 +315,44 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3187901232594624349}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 3.37, y: 1, z: 3.13}
   m_Center: {x: 0, y: 3.97, z: 0}
+--- !u!64 &1312060336
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3187901232594624349}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
+--- !u!95 &87573423801535035
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3187901232594624349}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 68954f2c953741946bff4d09517f8a51, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4591464978201205256
 GameObject:
   m_ObjectHideFlags: 0
@@ -702,4 +722,4 @@ Transform:
   - {fileID: 5653653445977339297}
   m_Father: {fileID: 6584675940868524207}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 17.25503, y: -74.81606, z: -0.86068916}
