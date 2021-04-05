@@ -26,7 +26,7 @@ public class PauseScript : MonoBehaviour
     {
         // Press P to pause
 
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetButtonDown("Pause"))
         {
             if (gamePaused)
             {
