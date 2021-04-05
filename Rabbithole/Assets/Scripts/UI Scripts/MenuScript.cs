@@ -9,7 +9,7 @@ public class MenuScript : MonoBehaviour
     public AudioClip button;
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Mountain Kev");
         Debug.Log("Play!");
     }
 

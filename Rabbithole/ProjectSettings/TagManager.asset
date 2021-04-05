@@ -12,6 +12,7 @@ TagManager:
   - Mole2
   - Mole3
   - Mole4
+  - HCarrot
   layers:
   - Default
   - TransparentFX

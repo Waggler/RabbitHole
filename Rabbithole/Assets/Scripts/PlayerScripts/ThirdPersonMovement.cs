@@ -262,5 +262,19 @@ public class ThirdPersonMovement : MonoBehaviour
             moleAnimator.SetBool("IsJumpedOn", false);
                 starsBonk.SetActive(false);
         }
+
+        // Health Pickup
+        if (other.gameObject.CompareTag("HCarrot"))
+        {
+            if (GameManager.Instance.health < 8)
+            {
+                GameManager.Instance.health += 1;
+                Destroy(other.gameObject);
+            }
+            else
+
+            return;
+        }
+
     }
 }

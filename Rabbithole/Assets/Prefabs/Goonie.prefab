@@ -125,7 +125,7 @@ MonoBehaviour:
     m_Bits: 8192
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
-  timeBetweenAttacks: 2.5
+  timeBetweenAttacks: 2
   projectile: {fileID: 6693725420883742121, guid: 96f31df05ea33f24996ce0bfa3b6a624,
     type: 3}
   projectileHorizontalForce: 32

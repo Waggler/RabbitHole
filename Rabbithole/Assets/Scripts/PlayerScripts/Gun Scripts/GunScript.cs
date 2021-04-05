@@ -52,7 +52,7 @@ public class GunScript : MonoBehaviour
         }
 
         // this used to be Input.GetKeyDown(KeyCode.R)  now it works with both controller and keyboard
-        if (Input.GetButtonDown("Reload") && GameManager.Instance.isReloading == false && ammoCount < 9)
+        if (Input.GetButtonDown("Reload") && GameManager.Instance.isReloading == false && GameManager.Instance.ammo < 9)
         {
             audioSource.PlayOneShot(reloadSound, 0.7f);
             StartCoroutine(routine: Reload());
