@@ -10913,7 +10913,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 529548429}
-  m_LocalRotation: {x: -0.040567447, y: 0.07295553, z: 0.0029699984, w: 0.9965054}
+  m_LocalRotation: {x: -0.04056748, y: 0.072955534, z: 0.0029700012, w: 0.9965054}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -13509,16 +13509,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 675874336}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1609030288}
-  m_RootOrder: 1
+  m_Father: {fileID: 1265240886}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 52.46, y: 11.199997}
+  m_AnchoredPosition: {x: 80.25998, y: 50.7}
   m_SizeDelta: {x: 153.36874, y: 57.756958}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &675874338
@@ -22065,7 +22065,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1191578244}
-  m_LocalRotation: {x: -0.040567447, y: 0.07295553, z: 0.0029699984, w: 0.9965054}
+  m_LocalRotation: {x: -0.04056748, y: 0.072955534, z: 0.0029700012, w: 0.9965054}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -23303,6 +23303,7 @@ RectTransform:
   - {fileID: 1327992919}
   - {fileID: 1609030288}
   - {fileID: 1900412811}
+  - {fileID: 675874337}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -25692,7 +25693,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1377436326}
-  m_LocalRotation: {x: 0.040567435, y: -0.07295553, z: -0.0029699977, w: -0.9965054}
+  m_LocalRotation: {x: 0.040567435, y: -0.072955534, z: -0.002969998, w: -0.9965054}
   m_LocalPosition: {x: -155.58, y: -41.402855, z: -1955.4054}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -29528,6 +29529,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1609030288}
+  - component: {fileID: 1609030289}
   m_Layer: 5
   m_Name: Healthbar J
   m_TagString: Untagged
@@ -29547,7 +29549,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 832494479}
-  - {fileID: 675874337}
   m_Father: {fileID: 1265240886}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -29556,6 +29557,19 @@ RectTransform:
   m_AnchoredPosition: {x: 77.8, y: 89.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1609030289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609030287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37cbe00264f8292469c0d1d873ab9be0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthFill: {fileID: 675874338}
 --- !u!1001 &1612244765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34786,6 +34800,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6189179054070390721, guid: cfe4db4bcceb98a4ba1a11ec6ba126be,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6189179054070390729, guid: cfe4db4bcceb98a4ba1a11ec6ba126be,
         type: 3}
       propertyPath: m_Name
