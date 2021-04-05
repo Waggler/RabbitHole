@@ -28,6 +28,8 @@ public class FoxGoonie : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
+    public Animator animator;
+
     private void Awake()
     {
         player = GameObject.Find("Player").transform;
@@ -78,6 +80,8 @@ public class FoxGoonie : MonoBehaviour
     private void ChasePlayer()
     {
         agent.SetDestination(player.position);
+        animator.SetBool("isShooting", false);
+        animator.SetBool("IsMoving", true);
     }
 
     private void AttackPlayer()
@@ -85,9 +89,12 @@ public class FoxGoonie : MonoBehaviour
         agent.SetDestination(transform.position);
 
         transform.LookAt(player);
+        animator.SetBool("isShooting", true);
+        animator.SetBool("isMoving", true);
 
         if (!alreadyAttacked)
         {
+            
             //Attack Code
             Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
             //Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();//This Can be changed for the bullet to come at a specific position
