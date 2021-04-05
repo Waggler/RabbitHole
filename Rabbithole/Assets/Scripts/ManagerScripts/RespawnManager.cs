@@ -20,6 +20,7 @@ public class RespawnManager : MonoBehaviour
                 if (GameManager.Instance.health > 0)
                 {
                     GameManager.Instance.player.transform.position = respawnPoint;
+                    GameManager.Instance.health -= 1f;
                 }
                 else
                     //GameManager.Instance.Die();
