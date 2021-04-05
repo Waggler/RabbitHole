@@ -96,7 +96,7 @@ public class FoxGoonie : MonoBehaviour
         {
             
             //Attack Code
-            Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+            Rigidbody rb = Instantiate(projectile, transform.position, this.transform.rotation).GetComponent<Rigidbody>();
             //Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();//This Can be changed for the bullet to come at a specific position
             rb.AddForce(transform.forward * projectileHorizontalForce, ForceMode.Impulse);
             rb.AddForce(transform.up * projectileVerticalForce, ForceMode.Impulse);

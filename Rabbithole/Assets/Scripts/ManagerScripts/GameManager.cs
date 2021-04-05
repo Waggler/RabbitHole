@@ -61,7 +61,14 @@ public class GameManager : MonoBehaviour
         }
         else
             ammoUI.SetBool("isReloading", false);
+
+        if (health <= 0)
+        {
+            targetScene = "Lose Screen";
+            ChangeScene();
+        }
     }
+
     public void ChangeScene()
     {
         SceneManager.LoadSceneAsync(targetScene);
