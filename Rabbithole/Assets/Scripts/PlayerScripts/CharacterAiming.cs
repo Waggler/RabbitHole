@@ -16,6 +16,11 @@ public class CharacterAiming : MonoBehaviour
     void Update()
     {
         float yawCamera = mainCamera.transform.rotation.eulerAngles.y;
-        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, yawCamera, 0), turnSpeed * Time.fixedDeltaTime);
+        if (PauseScript.gamePaused == false)
+        {
+            
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, yawCamera, 0), turnSpeed * Time.fixedDeltaTime);
+        }
+        
     }
 }
