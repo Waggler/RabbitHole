@@ -1069,7 +1069,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31583836}
-  m_LocalRotation: {x: -0.04050258, y: 0.09217239, z: 0.003752311, w: 0.99491197}
+  m_LocalRotation: {x: -0.040296774, y: 0.13612305, z: 0.0055415295, w: 0.9898566}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4149,7 +4149,7 @@ MonoBehaviour:
   m_LookaheadIgnoreY: 0
   m_HorizontalDamping: 0
   m_VerticalDamping: 0
-  m_ScreenX: 0.4
+  m_ScreenX: 0.35
   m_ScreenY: 0.5
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
@@ -12106,7 +12106,7 @@ MonoBehaviour:
   m_LookaheadIgnoreY: 0
   m_HorizontalDamping: 0
   m_VerticalDamping: 0
-  m_ScreenX: 0.4
+  m_ScreenX: 0.35
   m_ScreenY: 0.5
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
@@ -14529,6 +14529,11 @@ PrefabInstance:
         type: 3}
       propertyPath: stageGoal
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7556380510803162168, guid: 2c0a1af297091d24d8ba28a734992ceb,
+        type: 3}
+      propertyPath: targetScene
+      value: Win Screen
       objectReference: {fileID: 0}
     - target: {fileID: 7556380510803162169, guid: 2c0a1af297091d24d8ba28a734992ceb,
         type: 3}
@@ -23258,6 +23263,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1104726566}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1108172289
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1108172291}
+  - component: {fileID: 1108172290}
+  - component: {fileID: 1108172292}
+  m_Layer: 0
+  m_Name: Beta Dialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1108172290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108172289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09e1765ad61172245b1bfa1104e8d589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Mole
+    sentences:
+    - Welcome to RabbitHole Studios' Beta Test!
+    - We have things mostly figured out but we're still working on a few bits n bobs
+      here and there.
+    - In the meantime, it looks like you've figured out that WASD moves you! If you
+      can remember from the Vertical Slice, there are some more controls.
+    - Such as Jump is Spacebar, doing that again lets you glide, left click to shoot,
+      R to reload and shift to dash!
+    - If you're using a controller, just try out each button and you'll get it down
+      lickity split.
+    - To get through High Hare Heights here, you'll need to jump on my head, and
+      those of my neighbors to get through the level!
+    - It'd be nice if you could take out those pesky foxes too, but for now just
+      take care of yourself.
+    - Once you bounce off of the fourth fella, make your way to the RabbitHole and
+      you're home free! And don't forget to glide after getting a boost!
+--- !u!4 &1108172291
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108172289}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -154.47, y: -39.434177, z: -1949.01}
+  m_LocalScale: {x: 7.0044, y: 6.8484, z: 6.3708534}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1108172292
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108172289}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1109604624
 GameObject:
   m_ObjectHideFlags: 0
@@ -30082,7 +30162,7 @@ MonoBehaviour:
   m_LookaheadIgnoreY: 0
   m_HorizontalDamping: 0.25
   m_VerticalDamping: 0.25
-  m_ScreenX: 0.4
+  m_ScreenX: 0.35
   m_ScreenY: 0.5
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
@@ -34268,7 +34348,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699908860}
-  m_LocalRotation: {x: -0.04050258, y: 0.09217239, z: 0.003752311, w: 0.99491197}
+  m_LocalRotation: {x: -0.040296774, y: 0.13612305, z: 0.0055415295, w: 0.9898566}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -39863,7 +39943,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043142685}
-  m_LocalRotation: {x: 0.04050257, y: -0.09217239, z: -0.0037523098, w: -0.99491197}
+  m_LocalRotation: {x: 0.040296767, y: -0.13612305, z: -0.0055415286, w: -0.9898566}
   m_LocalPosition: {x: -155.58, y: -41.402855, z: -1955.4054}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
