@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Will's Scenes/Main Menu.unity
     guid: ba90b8c682526c142be9fced8915a7e1
   - enabled: 1
+    path: Assets/Scenes/Will's Scenes/Hub Level.unity
+    guid: 091874248a086464187bd9d128efc4b8
+  - enabled: 1
     path: Assets/Scenes/Will's Scenes/Mountain Kev.unity
     guid: 791a98410aa72c64591dbd9211f93a35
   - enabled: 1

@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 2664064462973962432}
   - component: {fileID: 2664064462973962433}
   m_Layer: 0
-  m_Name: Goonie
+  m_Name: mountain Goonie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -131,7 +131,7 @@ MonoBehaviour:
   projectileHorizontalForce: 32
   projectileVerticalForce: 4
   sightRange: 75
-  attackRange: 50
+  attackRange: 75
   playerInSightRange: 0
   playerInAttackRange: 0
   animator: {fileID: 2664064462640923489}
