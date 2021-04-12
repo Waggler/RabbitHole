@@ -1175,7 +1175,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.7779905, y: 1}
+    m_SensorSize: {x: 1.7775648, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1191,7 +1191,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31583836}
-  m_LocalRotation: {x: -0.04043585, y: 0.10841964, z: 0.0044137337, w: 0.9932727}
+  m_LocalRotation: {x: -0.040435966, y: 0.10839459, z: 0.0044127135, w: 0.99327546}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5791,7 +5791,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.7779905, y: 1}
+    m_SensorSize: {x: 1.7775648, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -8733,6 +8733,38 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 348743963}
   m_Mesh: {fileID: 1006839606539870910, guid: 86c8d29d238a8f14390aec48ee8ced0c, type: 3}
+--- !u!1 &353504201
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 353504202}
+  m_Layer: 0
+  m_Name: Dialogues
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &353504202
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353504201}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -137.37952, y: -37.830917, z: -1897.9154}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1108172291}
+  - {fileID: 1136554966}
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &354398587
 GameObject:
   m_ObjectHideFlags: 0
@@ -21217,7 +21249,7 @@ PrefabInstance:
     - target: {fileID: 3264465854945611951, guid: 4c2b2ee9b807e2545bfc503d46ff883e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3264465854945611951, guid: 4c2b2ee9b807e2545bfc503d46ff883e,
         type: 3}
@@ -21514,7 +21546,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.7779905, y: 1}
+    m_SensorSize: {x: 1.7775648, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -21530,7 +21562,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973787068}
-  m_LocalRotation: {x: -0.040435858, y: 0.10841966, z: 0.0044137337, w: 0.9932727}
+  m_LocalRotation: {x: -0.040435966, y: 0.10839459, z: 0.0044127135, w: 0.99327546}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -24031,7 +24063,7 @@ GameObject:
   - component: {fileID: 1108172290}
   - component: {fileID: 1108172292}
   m_Layer: 0
-  m_Name: Beta Dialogue
+  m_Name: 1st Mole Dialogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24052,21 +24084,17 @@ MonoBehaviour:
   dialogue:
     name: Mole
     sentences:
-    - Welcome to RabbitHole Studios' Beta Test!
-    - We have things mostly figured out but we're still working on a few bits n bobs
-      here and there.
-    - In the meantime, if you can remember from the Vertical Slice, WASD moves you
-      and there are some extra buttons for the controls!.
-    - Such as Jump is Spacebar, doing that again lets you glide, left click to shoot,
-      R to reload and shift to dash!
-    - If you're using a controller, just try out each button and you'll get it down
-      lickity split.
-    - To get through High Hare Heights here, you'll need to jump on my head, and
-      those of my neighbors to get through the level!
-    - It'd be nice if you could take out those pesky foxes too, but for now just
-      take care of yourself.
-    - Once you bounce off of the fourth fella, make your way to the RabbitHole and
-      you're home free! And don't forget to glide after getting a boost!
+    - Long time no see Gunny! Boy are we glad you're here too, these foxes just showed
+      up and are giving us all a hard time!
+    - Think you could teach em a lesson? They spook everyone else here, but I know
+      you don't have an issue with that gun of yours!
+    - Tell you what, you help us out, we can help you out! Like I said, we're spooked
+      by the foxes, once they're gone we can give you a boost!
+    - 'Just jump on us and we''ll give you enough of a jump to land on the other
+      side! '
+    - And you're the bunny that's light enough to glide right? Try doing that when
+      you get to the top of the jump!
+    - Just make sure you know where you're goin before hop on!
 --- !u!4 &1108172291
 Transform:
   m_ObjectHideFlags: 0
@@ -24074,13 +24102,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1108172289}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -154.47, y: -39.434177, z: -1949.01}
-  m_LocalScale: {x: 7.0044, y: 6.8484, z: 6.3708534}
+  m_LocalRotation: {x: -0, y: -0.26282907, z: -0, w: 0.9648425}
+  m_LocalPosition: {x: 16.139519, y: -2.679081, z: -15.43457}
+  m_LocalScale: {x: 5.2746964, y: 23.287012, z: 33.462822}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Father: {fileID: 353504202}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -30.476, z: 0}
 --- !u!65 &1108172292
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24540,6 +24568,77 @@ Transform:
   m_Father: {fileID: 2143083826}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1136554963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1136554966}
+  - component: {fileID: 1136554965}
+  - component: {fileID: 1136554964}
+  m_Layer: 0
+  m_Name: 1st Mole Dialogue (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1136554964
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136554963}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1136554965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136554963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09e1765ad61172245b1bfa1104e8d589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Mole
+    sentences:
+    - Long time no see Gunny! Boy are we glad you're here too, these foxes just showed
+      up and are giving us all a hard time!
+    - Think you could teach em a lesson? They spook everyone else here, but I know
+      you don't have an issue with that gun of yours!
+    - Tell you what, you help us out, we can help you out! Like I said, we're spooked
+      by the foxes, once they're gone we can give you a boost!
+    - 'Just jump on us and we''ll give you enough of a jump to land on the other
+      side! '
+    - And you're the bunny that's light enough to glide right? Try doing that when
+      you get to the top of the jump!
+    - Just make sure you know where you're goin before hop on!
+--- !u!4 &1136554966
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136554963}
+  m_LocalRotation: {x: -0, y: -0.26282907, z: -0, w: 0.9648425}
+  m_LocalPosition: {x: -6.3, y: -2.679081, z: 11.1}
+  m_LocalScale: {x: 5.2746964, y: 25.483715, z: 36.86433}
+  m_Children: []
+  m_Father: {fileID: 353504202}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: -30.476, z: 0}
 --- !u!1 &1141699691
 GameObject:
   m_ObjectHideFlags: 0
@@ -35298,7 +35397,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.7779905, y: 1}
+    m_SensorSize: {x: 1.7775648, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -35314,7 +35413,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699908860}
-  m_LocalRotation: {x: -0.04043585, y: 0.10841964, z: 0.0044137337, w: 0.9932727}
+  m_LocalRotation: {x: -0.040435966, y: 0.10839459, z: 0.0044127135, w: 0.99327546}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -40214,7 +40313,7 @@ Transform:
   - {fileID: 9142655895622155905}
   - {fileID: 30570866}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1992478227
 PrefabInstance:
@@ -41422,12 +41521,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043142685}
-  m_LocalRotation: {x: 0.040435836, y: -0.10841964, z: -0.004413732, w: -0.9932727}
+  m_LocalRotation: {x: 0.040435947, y: -0.10839459, z: -0.004412711, w: -0.99327546}
   m_LocalPosition: {x: -155.58, y: -41.402855, z: -1955.4054}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2043142688
 MonoBehaviour:
