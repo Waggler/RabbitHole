@@ -5,19 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Will's Scenes/Art VS.unity
-    guid: 03679d436af9758468c8b37020731199
   - enabled: 1
-    path: Assets/Scenes/Will's Scenes/Main Menu.unity
+    path: Assets/Scenes/Will's Scenes/Official Scenes/Main Menu.unity
     guid: ba90b8c682526c142be9fced8915a7e1
   - enabled: 1
-    path: Assets/Scenes/Will's Scenes/Hub Level.unity
-    guid: 7a051e87136729d4eb280a0474a2f74a
+    path: Assets/Scenes/Will's Scenes/Official Scenes/Hub Level.unity
+    guid: 091874248a086464187bd9d128efc4b8
   - enabled: 1
-    path: Assets/Scenes/Will's Scenes/Mountain.unity
-    guid: fc6b692c7a5a4004590e81b8d1287ab0
+    path: Assets/Scenes/Will's Scenes/Official Scenes/Mountain Kev.unity
+    guid: 791a98410aa72c64591dbd9211f93a35
   - enabled: 1
-    path: Assets/Scenes/Will's Scenes/Win Screen.unity
+    path: Assets/Scenes/Will's Scenes/Official Scenes/Win Screen.unity
     guid: 4615777b38101414781b2c16acb79b2a
+  - enabled: 1
+    path: Assets/Scenes/Will's Scenes/Official Scenes/Lose Screen.unity
+    guid: 25b365f2d9b3c754fa5cbd242d6eecd2
   m_configObjects: {}

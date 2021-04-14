@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Rabbithole/Assets/Scenes/Kevin's Scenes/GUNNYTEST 1.unity.meta
 guid: f0ba890172e3bc04398a94c32bc7e43e
 DefaultImporter:
+=======
+guid: 6a74eaf61992cd049938d17f35ee7ecd
+PrefabImporter:
+>>>>>>> origin/ChristEasterRisingDev:Rabbithole/Assets/Prefabs/Managers/SceneSetter.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

@@ -5,23 +5,19 @@ using UnityEngine.UI;
 
 public class HealthbarScript : MonoBehaviour
 {
-    // Moves around our slider
-    public Slider slider;
+    public Image healthFill;
 
-    // Sets Gunny's Max Health so we don't need to do it via inspector
-    public void SetMaxHealth(int health)
+    /*
+    public void Start()
     {
-        slider.maxValue = health;
-        slider.value = health;
+        healthFill.fillAmount = GameManager.Instance.maxHealth;
     }
+    */
 
-
-    // Gets assigned by Gunny's Health
-    public void Health(int health)
+    public void Update()
     {
-        slider.value = health;
+        healthFill.fillAmount = GameManager.Instance.maxHealth;
+        healthFill.fillAmount = GameManager.Instance.health / GameManager.Instance.maxHealth;
     }
-
-
 }
  

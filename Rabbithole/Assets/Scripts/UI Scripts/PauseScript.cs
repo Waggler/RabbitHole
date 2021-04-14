@@ -26,7 +26,7 @@ public class PauseScript : MonoBehaviour
     {
         // Press P to pause
 
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetButtonDown("Pause"))
         {
             if (gamePaused)
             {
@@ -62,6 +62,8 @@ public class PauseScript : MonoBehaviour
     // Go to the main menu
     public void MainMenu()
     {
+        Time.timeScale = 1f;
+        gamePaused = false;
         SceneManager.LoadScene("Main Menu");
     }
 

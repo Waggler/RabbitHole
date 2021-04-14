@@ -258,5 +258,19 @@ public class ThirdPersonMovement : MonoBehaviour
             yield return new WaitForSeconds(3);
             moleAnimator.SetBool("IsJumpedOn", false);
         }
+
+        // Health Pickup
+        if (other.gameObject.CompareTag("HCarrot"))
+        {
+            if (GameManager.Instance.health < 8)
+            {
+                GameManager.Instance.health += 1;
+                Destroy(other.gameObject);
+            }
+            else
+
+            return;
+        }
+
     }
 }
