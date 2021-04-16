@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
+using UnityEngine.EventSystems;
 
 
 
@@ -20,6 +21,11 @@ public class PauseScript : MonoBehaviour
 
     [Header("GameObjects")]
     public GameObject pauseMenu;
+
+    ///Gives Controller Support to menus
+    public GameObject pauseButton;
+    public GameObject optionsButton;
+    public GameObject closedButton;
 
     // Update is called once per frame
     void Update()
@@ -57,6 +63,11 @@ public class PauseScript : MonoBehaviour
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         gamePaused = true;
+
+        //clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new selected object
+        EventSystem.current.SetSelectedGameObject(pauseButton);
     }
 
     // Go to the main menu
