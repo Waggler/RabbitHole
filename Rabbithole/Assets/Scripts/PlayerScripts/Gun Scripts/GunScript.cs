@@ -15,6 +15,7 @@ public class GunScript : MonoBehaviour
     private float nextTimeToFire = 1f;
     public bool reloading;
     public Camera fpsCam;
+    private bool isChad;
 
     [Header("Audio")]
     public AudioSource audioSource;
@@ -39,7 +40,7 @@ public class GunScript : MonoBehaviour
     {
         //This makes the Controller Trigger useable
         float controllerShooting = Input.GetAxis("RT");
-
+        isChad = GameObject.Find("Player").GetComponent<ThirdPersonMovement>().isChad;
         // changed to use controller shooting and fire1 mouse shooting
         if (controllerShooting >= 1 && Time.time >= nextTimeToFire && GameManager.Instance.ammo > 0 && GameManager.Instance.isReloading == false|| Input.GetButton("Fire1") && Time.time >= nextTimeToFire && GameManager.Instance.ammo > 0 && GameManager.Instance.isReloading == false)
         {
@@ -70,9 +71,14 @@ public class GunScript : MonoBehaviour
             Debug.Log(hit.transform.name);
 
             Target target = hit.transform.GetComponent<Target>();
+            Foxtrot boss = hit.transform.GetComponent<Foxtrot>();
             if (target != null)
             {
                 target.TakeDamage(damage);
+            }
+            if (boss != null && isChad == true)
+            {
+                boss.TakeDamage(damage);
             }
 
             // This allows the gun to push back rigidbodies when hit
