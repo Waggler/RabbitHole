@@ -13,6 +13,7 @@ TagManager:
   - Mole3
   - Mole4
   - HCarrot
+  - GoldKarat
   layers:
   - Default
   - TransparentFX
