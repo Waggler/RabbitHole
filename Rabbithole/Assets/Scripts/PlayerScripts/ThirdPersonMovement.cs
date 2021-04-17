@@ -46,16 +46,32 @@ public class ThirdPersonMovement : MonoBehaviour
 
     Animator animator;
     public Animator moleAnimator;
+
+
+    public float turnSpeed = 15;
+    Camera mainCamera;
+
+    [Header("Karat UI")]
+
+    public GameObject karatOneUI;
+    public GameObject karatTwoUI;
+    public GameObject karatThreeUI;
+
+    public int karatPieces;
+    public bool isChad;
+
     // Locks Cursor
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        mainCamera = Camera.main;
     }// END Start
 
 
     void Update()
     {
         animator = GetComponent<Animator>();
+        float yawCamera = mainCamera.transform.rotation.eulerAngles.y;
         // Gets input from player movement
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
@@ -65,13 +81,14 @@ public class ThirdPersonMovement : MonoBehaviour
 
         // Checks if player is grounded
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, yawCamera, 0), turnSpeed * Time.fixedDeltaTime);
         // Handles Movement Logic
         if (direction.magnitude >= 0.1f)
         {
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
-            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+            //transform.rotation = Quaternion.Euler(0f, angle, 0f);
+            
 
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             controller.Move(moveDir.normalized * speed * Time.deltaTime);
@@ -258,6 +275,25 @@ public class ThirdPersonMovement : MonoBehaviour
             yield return new WaitForSeconds(3);
             moleAnimator.SetBool("IsJumpedOn", false);
         }
+        if (other.CompareTag("GoldKarat"))
+        {
+            Destroy(other.gameObject);
+            karatPieces += 1;
+
+            if (karatPieces >= 3)
+            {
+                karatThreeUI.gameObject.SetActive(true);
+                isChad = true;
+            }
+            else if (karatPieces == 2)
+            {
+                karatTwoUI.gameObject.SetActive(true);
+            }
+            else if (karatPieces == 1)
+            {
+                karatOneUI.gameObject.SetActive(true);
+            }
+        }
 
         // Health Pickup
         if (other.gameObject.CompareTag("HCarrot"))
@@ -272,5 +308,7 @@ public class ThirdPersonMovement : MonoBehaviour
             return;
         }
 
+        
     }
+
 }

@@ -28,17 +28,18 @@ public class KaratScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
+        Destroy(other.gameObject);
         karatPieces += 1;
 
             if (karatPieces == 1)
             { 
                 karatOneUI.gameObject.SetActive(true); 
-            } else if (karatPieces == 2)
-        {
+            } 
+            else if (karatPieces == 2)
+            {
                 karatTwoUI.gameObject.SetActive(true);
-        } else if (karatPieces == 3)
-            if (karatPieces == 3)
+        }
+            else if (karatPieces == 3)
             {
                 karatThreeUI.gameObject.SetActive(true);
             }

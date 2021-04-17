@@ -12,13 +12,20 @@ public class FoxGoonie : MonoBehaviour
     public LayerMask whatIsGround, whatIsPlayer;
 
     //Patrolling
-    public Vector3 walkPoint;
+    //public Vector3 walkPoint;
     bool walkPointSet;
-    public float walkPointRange;
+    //public float walkPointRange;
+    //private Transform[] patrolPoints;
+    public Transform[] points;
+    private int destPoint = 0;
 
     //Attacking
     public float timeBetweenAttacks;
     bool alreadyAttacked;
+    Transform target;
+    public Transform bulletSpawn;
+    private float timer = 0.0f;
+    public float animShotDelay;
 
     public GameObject projectile;
     public float projectileHorizontalForce = 32f;
@@ -34,7 +41,10 @@ public class FoxGoonie : MonoBehaviour
     {
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
-
+        target = player;
+        //patrolPoints = new Transform[numPatrolPoints];
+        agent.autoBraking = false;
+        GotoNextPoint();
     }
 
     void Update()
@@ -42,12 +52,13 @@ public class FoxGoonie : MonoBehaviour
         //Check for sight and attack range
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
+        
 
-        if (!playerInSightRange && !playerInAttackRange) Patrolling();
+        if (!playerInSightRange && !playerInAttackRange) GotoNextPoint();
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
         if (playerInAttackRange && playerInSightRange) AttackPlayer();
     }
-    private void Patrolling()
+    /*private void Patrolling()
     {
         if (!walkPointSet) SearchWalkPoint();
         
@@ -60,9 +71,9 @@ public class FoxGoonie : MonoBehaviour
                 walkPointSet = false;
             }
         }
-    }
+    }*/
 
-    private void SearchWalkPoint()
+    /*private void SearchWalkPoint()
     {
         //Calculate rand point in range
         float randomZ = Random.Range(-walkPointRange, walkPointRange);
@@ -70,33 +81,50 @@ public class FoxGoonie : MonoBehaviour
 
         walkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
 
-        if (Physics.Raycast(walkPoint, - transform.up, 2f, whatIsGround))
+        if (Physics.Raycast(walkPoint, - transform.up, 3f, whatIsGround))
         {
             walkPointSet = true;
         }
 
-    }
+    }*/
+    void GotoNextPoint()
+    {
+        // Returns if no points have been set up
+        if (points.Length == 0)
+            return;
+
+        // Set the agent to go to the currently selected destination.
+        agent.destination = points[destPoint].position;
+
+        // Choose the next point in the array as the destination,
+        // cycling to the start if necessary.
+        destPoint = (destPoint + 1) % points.Length;
+    }//end GoToNextPoint
 
     private void ChasePlayer()
     {
         agent.SetDestination(player.position);
         animator.SetBool("isShooting", false);
-        animator.SetBool("IsMoving", true);
+        animator.SetBool("isMoving", true);
+        timer = 0;
     }
 
     private void AttackPlayer()
     {
-        agent.SetDestination(transform.position);
+        agent.SetDestination(this.transform.position);
 
         transform.LookAt(player);
         animator.SetBool("isShooting", true);
         animator.SetBool("isMoving", true);
+        timer += Time.deltaTime;
 
-        if (!alreadyAttacked)
+        if (!alreadyAttacked && timer > 1)
         {
-            
+
             //Attack Code
-            Rigidbody rb = Instantiate(projectile, transform.position, this.transform.rotation).GetComponent<Rigidbody>();
+            animator.SetTrigger("Shoot");
+            StartCoroutine(ShotDelay());
+            Rigidbody rb = Instantiate(projectile, bulletSpawn.position, this.transform.rotation).GetComponent<Rigidbody>();
             //Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();//This Can be changed for the bullet to come at a specific position
             rb.AddForce(transform.forward * projectileHorizontalForce, ForceMode.Impulse);
             rb.AddForce(transform.up * projectileVerticalForce, ForceMode.Impulse);
@@ -117,6 +145,10 @@ public class FoxGoonie : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, attackRange);
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, sightRange);
+    }
+    IEnumerator ShotDelay()
+    {
+        yield return new WaitForSeconds(animShotDelay);
     }
 }
 
