@@ -1175,7 +1175,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.7775648, y: 1}
+    m_SensorSize: {x: 1.7779905, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1191,7 +1191,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31583836}
-  m_LocalRotation: {x: -0.040435966, y: 0.10839459, z: 0.0044127135, w: 0.99327546}
+  m_LocalRotation: {x: -0.040435854, y: 0.10841966, z: 0.0044137337, w: 0.9932727}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5791,7 +5791,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.7775648, y: 1}
+    m_SensorSize: {x: 1.7779905, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -15160,12 +15160,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c0a1af297091d24d8ba28a734992ceb, type: 3}
---- !u!4 &667751985 stripped
+--- !u!4 &667751985
 Transform:
-  m_CorrespondingSourceObject: {fileID: 7556380510803162169, guid: 2c0a1af297091d24d8ba28a734992ceb,
-    type: 3}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 667751984}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853309497}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1686973290}
+  m_Father: {fileID: 1624801363}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &670846902
 GameObject:
   m_ObjectHideFlags: 0
@@ -19013,6 +19022,22 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 850395655}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &853309497
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 667751984}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 667751985}
+  m_Layer: 0
+  m_Name: SceneSetter (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &853322151
 GameObject:
   m_ObjectHideFlags: 0
@@ -21546,7 +21571,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.7775648, y: 1}
+    m_SensorSize: {x: 1.7779905, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -21562,7 +21587,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973787068}
-  m_LocalRotation: {x: -0.040435966, y: 0.10839459, z: 0.0044127135, w: 0.99327546}
+  m_LocalRotation: {x: -0.040435858, y: 0.10841966, z: 0.0044137337, w: 0.9932727}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -35158,6 +35183,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1685294829}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1686973289
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 667751984}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1686973290}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1686973290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 7556380510803162169, guid: 2c0a1af297091d24d8ba28a734992ceb,
+    type: 3}
+  m_PrefabInstance: {fileID: 667751984}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686973289}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 667751985}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1692094254
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35397,7 +35453,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.7775648, y: 1}
+    m_SensorSize: {x: 1.7779905, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -35413,7 +35469,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699908860}
-  m_LocalRotation: {x: -0.040435966, y: 0.10839459, z: 0.0044127135, w: 0.99327546}
+  m_LocalRotation: {x: -0.040435854, y: 0.10841966, z: 0.0044137337, w: 0.9932727}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -36680,12 +36736,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1779016692}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1779016694 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4152646921172799273, guid: 37a91aa9c781ebf4f9f6c92bc645d782,
-    type: 3}
-  m_PrefabInstance: {fileID: 1779016692}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1779758894
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37417,6 +37467,9 @@ MonoBehaviour:
   button: {fileID: 8300000, guid: 22e56c367abf6274e9d160a5186cbc80, type: 3}
   audioMixer: {fileID: 24100000, guid: 0e6a10d641c319f4392a9eedc879113c, type: 2}
   pauseMenu: {fileID: 1621135171}
+  pauseButton: {fileID: 0}
+  optionsButton: {fileID: 0}
+  closedButton: {fileID: 0}
 --- !u!82 &1828103393
 AudioSource:
   m_ObjectHideFlags: 0
@@ -37525,6 +37578,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e080800432f05fe42b58d7bc69a5e964, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainmenuButton: {fileID: 0}
+  optionsButton: {fileID: 0}
+  HTPButton: {fileID: 0}
+  controllerButton: {fileID: 0}
+  keyboardButton: {fileID: 0}
+  controllerMenu: {fileID: 0}
+  keyboardMenu: {fileID: 0}
+  htpMenu: {fileID: 0}
+  optionsMenu: {fileID: 0}
   button: {fileID: 8300000, guid: 22e56c367abf6274e9d160a5186cbc80, type: 3}
 --- !u!114 &1828103395
 MonoBehaviour:
@@ -41521,7 +41583,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043142685}
-  m_LocalRotation: {x: 0.040435947, y: -0.10839459, z: -0.004412711, w: -0.99327546}
+  m_LocalRotation: {x: 0.040435836, y: -0.10841966, z: -0.004413732, w: -0.9932727}
   m_LocalPosition: {x: -155.58, y: -41.402855, z: -1955.4054}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -43041,12 +43103,12 @@ MonoBehaviour:
   hitPoints: 8
   damageTaken: 1
   moleAnimator: {fileID: 1211499544}
-  starsBonk: {fileID: 1779016694}
-  starsBonks:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  turnSpeed: 15
+  karatOneUI: {fileID: 0}
+  karatTwoUI: {fileID: 0}
+  karatThreeUI: {fileID: 0}
+  karatPieces: 0
+  isChad: 0
 --- !u!143 &2143083832
 CharacterController:
   m_ObjectHideFlags: 0

@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &618092071
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 618092072}
+  m_Layer: 0
+  m_Name: BulletExit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &618092072
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618092071}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.581, y: 0.459, z: 5.742}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2664064462973964092}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2664064462542303158
 GameObject:
   m_ObjectHideFlags: 0
@@ -44,7 +74,6 @@ GameObject:
   - component: {fileID: 2664064462973964094}
   - component: {fileID: 2664064462973964093}
   - component: {fileID: 2664064462973962432}
-  - component: {fileID: 2664064462973962433}
   m_Layer: 0
   m_Name: Beach Goonie
   m_TagString: Untagged
@@ -64,6 +93,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2664064462542303159}
+  - {fileID: 618092072}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -0.05, y: -0.012, z: 0.322}
@@ -90,7 +120,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 2664064462973964091}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 3
+  m_Radius: 2.8
   m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -123,15 +153,19 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 8192
-  walkPoint: {x: 0, y: 0, z: 0}
-  walkPointRange: 5
+  points:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   timeBetweenAttacks: 2
+  bulletSpawn: {fileID: 618092072}
+  animShotDelay: 0
   projectile: {fileID: 6693725420883742121, guid: 96f31df05ea33f24996ce0bfa3b6a624,
     type: 3}
   projectileHorizontalForce: 32
   projectileVerticalForce: 4
   sightRange: 100
-  attackRange: 45
+  attackRange: 25
   playerInSightRange: 0
   playerInAttackRange: 0
   animator: {fileID: 2664064462640923489}
@@ -148,22 +182,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 30
---- !u!54 &2664064462973962433
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2664064462973964091}
-  serializedVersion: 2
-  m_Mass: 0.0000001
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!95 &2664064462640923489
 Animator:
   serializedVersion: 3
