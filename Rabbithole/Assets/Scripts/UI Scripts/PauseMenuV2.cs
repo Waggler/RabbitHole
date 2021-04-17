@@ -2,13 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 using UnityEngine.EventSystems;
 
-public class MenuScript : MonoBehaviour
-{
 
-///Gives Controller Support to menus
-    public GameObject mainmenuButton;
+
+
+public class PauseMenuV2 : MonoBehaviour
+{
+    [Header("Audio")]
+    public AudioSource aSource;
+    public AudioClip button;
+    public AudioMixer audioMixer;
+
+
+    [Header("Bool")]
+    public static bool gamePaused = false;
+
+    [Header("GameObjects")]
+    public GameObject pauseMenu;
+
+    ///Gives Controller Support to menus
+    public GameObject pauseButton;
     public GameObject optionsButton;
     public GameObject HTPButton;
     public GameObject controllerButton;
@@ -17,22 +32,51 @@ public class MenuScript : MonoBehaviour
     public GameObject keyboardMenu;
     public GameObject htpMenu;
     public GameObject optionsMenu;
-    public AudioClip button;
-    public void PlayGame()
+
+
+    // Update is called once per frame
+    void Update()
     {
-        SceneManager.LoadScene("Hub Level");
-        Debug.Log("Play!");
+        // Press P to pause
+
+        if (Input.GetButtonDown("Pause"))
+        {
+            if (gamePaused)
+            {
+                Resume();
+            }
+            else
+            {
+                Pause();
+            }
+        }
     }
 
-    public void MainMenu()
+    // Play da game
+    public void Resume()
     {
-        SceneManager.LoadScene("Main Menu");
+        Cursor.lockState = CursorLockMode.Locked;
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1f;
+        gamePaused = false;
     }
-    public void QuitGame()
+
+
+
+    // Pause da game
+    void Pause()
     {
-        Application.Quit();
-        Debug.Log("Quit!");
+        Cursor.lockState = CursorLockMode.Confined;
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0f;
+        gamePaused = true;
+
+        //clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new selected object
+        EventSystem.current.SetSelectedGameObject(pauseButton);
     }
+
     public void OpenOptions()
     {
         optionsMenu.SetActive(true);
@@ -46,7 +90,7 @@ public class MenuScript : MonoBehaviour
         //clear selected object
         EventSystem.current.SetSelectedGameObject(null);
         //set new selected object
-        EventSystem.current.SetSelectedGameObject(mainmenuButton);
+        EventSystem.current.SetSelectedGameObject(pauseButton);
         optionsMenu.SetActive(false);
     }
     public void OpenHTP()
@@ -62,7 +106,7 @@ public class MenuScript : MonoBehaviour
         //clear selected object
         EventSystem.current.SetSelectedGameObject(null);
         //set new selected object
-        EventSystem.current.SetSelectedGameObject(mainmenuButton);
+        EventSystem.current.SetSelectedGameObject(pauseButton);
         htpMenu.SetActive(false);
     }
     public void OpenKeyboardScreen()
@@ -97,4 +141,13 @@ public class MenuScript : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(HTPButton);
         controllerMenu.SetActive(false);
     }
+
+    // Go to the main menu
+    public void MainMenu()
+    {
+        Time.timeScale = 1f;
+        gamePaused = false;
+        SceneManager.LoadScene("Main Menu");
+    }
+
 }
