@@ -13847,7 +13847,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699908860}
-  m_LocalRotation: {x: -0.040435832, y: 0.108419634, z: 0.00441373, w: 0.9932727}
+  m_LocalRotation: {x: -0.040435858, y: 0.10841964, z: 0.0044137333, w: 0.9932727}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -15955,8 +15955,8 @@ MonoBehaviour:
   animShotDelay: 0
   projectile: {fileID: 4761258748891929099, guid: 4d52f49f76495fa44af803fab1b23b57,
     type: 3}
-  projectileHorizontalForce: 32
-  projectileVerticalForce: 4
+  projectileHorizontalForce: 75
+  projectileVerticalForce: 2
   sightRange: 200
   attackRange: 50
   playerInSightRange: 0
@@ -15975,6 +15975,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossHealth: 50
+  gate: {fileID: 0}
 --- !u!1 &2066884959
 GameObject:
   m_ObjectHideFlags: 0
@@ -16860,6 +16861,7 @@ MonoBehaviour:
   audioSource: {fileID: 2143083828}
   gunShot: {fileID: 8300000, guid: 329ca4713529f8045bef88de2448ba83, type: 3}
   reloadSound: {fileID: 8300000, guid: fc630610b9aac2643b9beb4d03d6edb4, type: 3}
+  animator: {fileID: 0}
 --- !u!23 &2143083830
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16932,6 +16934,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 768
   velocity: {x: 0, y: 0, z: 0}
+  turnSpeed: 15
   isDashing: 0
   dashDistance: 5
   dashCooldown: 2
@@ -16944,7 +16947,6 @@ MonoBehaviour:
   hitPoints: 8
   damageTaken: 1
   moleAnimator: {fileID: 0}
-  turnSpeed: 15
   karatOneUI: {fileID: 1922361280}
   karatTwoUI: {fileID: 1945620302}
   karatThreeUI: {fileID: 960668103}
@@ -19846,7 +19848,7 @@ GameObject:
   - component: {fileID: 2059108311}
   - component: {fileID: 2059108312}
   m_Layer: 0
-  m_Name: Foxtrot
+  m_Name: Commander Foxtrot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
