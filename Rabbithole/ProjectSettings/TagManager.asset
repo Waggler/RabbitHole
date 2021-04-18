@@ -14,6 +14,7 @@ TagManager:
   - Mole4
   - HCarrot
   - GoldKarat
+  - TimePickup
   layers:
   - Default
   - TransparentFX

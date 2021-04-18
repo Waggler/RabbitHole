@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     public Animator ammoUI;
     [HideInInspector]public int maxAmmo = 9;
     public int ammo;
-    public bool isReloading;
+    public bool isReloading;    
 
     [Header("Level Completion")]
     public bool tutComplete = false;
@@ -28,6 +28,10 @@ public class GameManager : MonoBehaviour
     [Header("Scene Transitions")]
     public string currentScene;
     public string targetScene;
+
+    [Header("Bandaids")]
+    public int enemiesKilled = 0;
+    public float timeReduced;
 
     [Header("Pause Menu")]
     public bool isPaused;
@@ -45,7 +49,6 @@ public class GameManager : MonoBehaviour
         }
     }
   
-
     private void Start()
     {
         ammoUI.SetInteger("ammoAmount", maxAmmo);

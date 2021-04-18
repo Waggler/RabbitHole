@@ -20,6 +20,7 @@ public class Target : MonoBehaviour
 
     void Die()
     {
+        GameManager.Instance.enemiesKilled++;
         gameObject.SetActive(false);
     }// END DIE
 
