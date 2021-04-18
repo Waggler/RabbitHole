@@ -22,6 +22,8 @@ public class GunScript : MonoBehaviour
     public AudioClip gunShot;
     public AudioClip reloadSound;
 
+    public Animator animator;
+
 
     /*
     private void Start()
@@ -46,10 +48,16 @@ public class GunScript : MonoBehaviour
         {
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
+            animator.SetTrigger("Shoot");
+            animator.SetBool("isShooting", true);
             GameManager.Instance.ammo -= 1;
             GameManager.Instance.ammoUI.SetInteger("ammoAmount", GameManager.Instance.ammo);
             audioSource.PlayOneShot(gunShot, 0.7f);
 
+        }
+        else
+        {
+            animator.SetBool("isShooting", false);
         }
 
         // this used to be Input.GetKeyDown(KeyCode.R)  now it works with both controller and keyboard

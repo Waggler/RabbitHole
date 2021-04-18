@@ -98,15 +98,21 @@ public class ThirdPersonMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-            animator.SetBool("isJumping", true);
+            animator.SetTrigger("Jump");
             animator.SetBool("isGrounded", false);
-
         }
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            animator.SetBool("isGrounded", false);
+        }
+        
 
         // Resets Glide Timer
         if (!isGrounded)
         {
             glideTimer += Time.deltaTime;
+            animator.SetBool("isFalling", true);
         }
 
         // Handles Gliding Logic
@@ -118,6 +124,7 @@ public class ThirdPersonMovement : MonoBehaviour
                 gravity = -5;
                 isGliding = true;
                 animator.SetBool("isGliding", true);
+                animator.SetBool("isFalling", false);
             }
             else if (isGliding == true)
             {
@@ -125,6 +132,7 @@ public class ThirdPersonMovement : MonoBehaviour
                 gravity = -30;
                 isGliding = false;
                 animator.SetBool("isGliding", false);
+                animator.SetBool("isFalling", true);
             }
         }
 
@@ -138,6 +146,7 @@ public class ThirdPersonMovement : MonoBehaviour
             bounced = false;
             animator.SetBool("isGrounded", true);
             animator.SetBool("isJumping", false);
+            animator.SetBool("isFalling", false);
             animator.SetBool("isGliding", false);
         }
 
@@ -149,6 +158,7 @@ public class ThirdPersonMovement : MonoBehaviour
                 gravity = -5;
                 isGliding = true;
                 animator.SetBool("isGliding", true);
+                animator.SetBool("isFalling", false);
             }
             else if (isGliding == true)
             {
@@ -156,6 +166,7 @@ public class ThirdPersonMovement : MonoBehaviour
                 gravity = -30;
                 isGliding = false;
                 animator.SetBool("isGliding", false);
+                animator.SetBool("isFalling", true);
             }
         }
 

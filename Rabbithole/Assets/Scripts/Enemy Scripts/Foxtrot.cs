@@ -7,6 +7,7 @@ public class Foxtrot : MonoBehaviour
 {
     // Health of Target
     public float bossHealth = 50f;
+    public GameObject gate;
 
     public void TakeDamage(float amount)
     {
@@ -15,6 +16,7 @@ public class Foxtrot : MonoBehaviour
         if (bossHealth <= 0f)
         {
             BossDie();
+            gate.SetActive(false);
         }
     }// END TakeDamage
 

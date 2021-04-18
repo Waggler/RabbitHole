@@ -48,6 +48,10 @@ public class FoxtrotShoot : MonoBehaviour
         transform.LookAt(player);
         //if (playerInSightRange && !playerInAttackRange) ChasePlayer();
         if (playerInAttackRange && playerInSightRange) AttackPlayer();
+        else
+        {
+            animator.SetBool("isShooting", false);
+        }
     }
     /*private void Patrolling()
     {
@@ -83,28 +87,20 @@ public class FoxtrotShoot : MonoBehaviour
     {
         //agent.SetDestination(player.position);
         animator.SetBool("isShooting", false);
-        animator.SetBool("isMoving", true);
         timer = 0;
     }
 
     private void AttackPlayer()
     {
         animator.SetBool("isShooting", true);
-        animator.SetBool("isMoving", true);
         timer += Time.deltaTime;
 
         if (!alreadyAttacked && timer > 1)
         {
 
             //Attack Code
-            animator.SetTrigger("Shoot");
-            StartCoroutine(ShotDelay());
-            Rigidbody rb = Instantiate(projectile, bulletSpawn.position, this.transform.rotation).GetComponent<Rigidbody>();
-            //Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();//This Can be changed for the bullet to come at a specific position
-            rb.AddForce(transform.forward * projectileHorizontalForce, ForceMode.Impulse);
-            rb.AddForce(transform.up * projectileVerticalForce, ForceMode.Impulse);
 
-
+            StartCoroutine("ShotDelay");
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
@@ -123,6 +119,15 @@ public class FoxtrotShoot : MonoBehaviour
     }
     IEnumerator ShotDelay()
     {
+        animator.SetTrigger("Shoot");
         yield return new WaitForSeconds(animShotDelay);
+        Rigidbody rb = Instantiate(projectile, bulletSpawn.position, this.transform.rotation).GetComponent<Rigidbody>();
+        rb.AddForce(transform.forward * projectileHorizontalForce, ForceMode.Impulse);
+        rb.AddForce(transform.up * projectileVerticalForce, ForceMode.Impulse);
+        rb.AddForce(-transform.right * 2, ForceMode.Impulse);
+
+
+        
+
     }
 }
