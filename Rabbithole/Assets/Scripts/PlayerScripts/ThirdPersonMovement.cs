@@ -26,6 +26,7 @@ public class ThirdPersonMovement : MonoBehaviour
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
     public Vector3 velocity;
+    public float turnSpeed = 15;
 
     [Header("Dash Settings")]
     public bool isDashing;
@@ -44,11 +45,10 @@ public class ThirdPersonMovement : MonoBehaviour
     public float hitPoints;
     public float damageTaken;
 
+    [Header("Animator Settings")]
     Animator animator;
     public Animator moleAnimator;
 
-
-    public float turnSpeed = 15;
     Camera mainCamera;
 
     [Header("Karat UI")]
@@ -307,8 +307,16 @@ public class ThirdPersonMovement : MonoBehaviour
 
             return;
         }
-
         
+        //Timer Pickup
+        if (other.gameObject.CompareTag("TimePickup"))
+        {
+                GameManager.Instance.timeReduced += 5f;
+                Destroy(other.gameObject);
+        }
+            else
+
+            return;
     }
 
 }
