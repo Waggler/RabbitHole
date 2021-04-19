@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -529,7 +529,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.7800688, y: 1}
+    m_SensorSize: {x: 2.3994083, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -545,7 +545,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31583836}
-  m_LocalRotation: {x: -0.040435277, y: 0.108541936, z: 0.0044187075, w: 0.9932594}
+  m_LocalRotation: {x: -0.040249858, y: 0.1442582, z: 0.005872711, w: 0.9887037}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -877,8 +877,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 117551402}
-        m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
+      - m_Target: {fileID: 117551399}
+        m_TargetAssemblyTypeName: PauseMenuV2, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -1158,8 +1158,6 @@ GameObject:
   - component: {fileID: 117551405}
   - component: {fileID: 117551404}
   - component: {fileID: 117551403}
-  - component: {fileID: 117551402}
-  - component: {fileID: 117551401}
   - component: {fileID: 117551400}
   - component: {fileID: 117551399}
   m_Layer: 5
@@ -1291,47 +1289,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &117551401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 117551398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 733a48d307ff43148917c85d311d074e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aSource: {fileID: 0}
-  button: {fileID: 8300000, guid: 22e56c367abf6274e9d160a5186cbc80, type: 3}
-  audioMixer: {fileID: 24100000, guid: 0e6a10d641c319f4392a9eedc879113c, type: 2}
-  pauseMenu: {fileID: 329131902}
-  pauseButton: {fileID: 1913365490}
-  optionsButton: {fileID: 1437041005}
-  closedButton: {fileID: 0}
---- !u!114 &117551402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 117551398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e080800432f05fe42b58d7bc69a5e964, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainmenuButton: {fileID: 0}
-  optionsButton: {fileID: 0}
-  HTPButton: {fileID: 0}
-  controllerButton: {fileID: 0}
-  keyboardButton: {fileID: 0}
-  controllerMenu: {fileID: 0}
-  keyboardMenu: {fileID: 0}
-  htpMenu: {fileID: 0}
-  optionsMenu: {fileID: 0}
-  button: {fileID: 8300000, guid: 22e56c367abf6274e9d160a5186cbc80, type: 3}
 --- !u!114 &117551403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2204,7 +2161,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.7800688, y: 1}
+    m_SensorSize: {x: 2.3994083, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -8707,7 +8664,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.7800688, y: 1}
+    m_SensorSize: {x: 2.3994083, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -8723,7 +8680,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973787068}
-  m_LocalRotation: {x: -0.040435314, y: 0.108541936, z: 0.0044187126, w: 0.9932594}
+  m_LocalRotation: {x: -0.04024982, y: 0.1442582, z: 0.0058727064, w: 0.9887037}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -13977,7 +13934,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.7800688, y: 1}
+    m_SensorSize: {x: 2.3994083, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -13993,7 +13950,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699908860}
-  m_LocalRotation: {x: -0.040435277, y: 0.108541936, z: 0.0044187075, w: 0.9932594}
+  m_LocalRotation: {x: -0.04024982, y: 0.1442582, z: 0.0058727064, w: 0.9887037}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -14807,8 +14764,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 117551401}
-        m_TargetAssemblyTypeName: PauseScript, Assembly-CSharp
+      - m_Target: {fileID: 117551399}
+        m_TargetAssemblyTypeName: PauseMenuV2, Assembly-CSharp
         m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
@@ -15893,7 +15850,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043142685}
-  m_LocalRotation: {x: 0.04043529, y: -0.108541936, z: -0.0044187093, w: -0.9932594}
+  m_LocalRotation: {x: 0.040249836, y: -0.14425822, z: -0.0058727083, w: -0.9887037}
   m_LocalPosition: {x: -12.46, y: 7.2171426, z: 33.82457}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -16387,7 +16344,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1265240888}
         m_TargetAssemblyTypeName: Settings, Assembly-CSharp
         m_MethodName: SetVolume
         m_Mode: 0
@@ -16804,7 +16761,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 117551401}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseScript, Assembly-CSharp
         m_MethodName: MainMenu
         m_Mode: 1
@@ -17104,6 +17061,8 @@ MonoBehaviour:
   nonChadGFX: {fileID: 1816298147}
   Chad: {fileID: 611122636}
   chadJumpHeight: 3
+  starsParticle: {fileID: 0}
+  timerParticle: {fileID: 0}
 --- !u!143 &2143083832
 CharacterController:
   m_ObjectHideFlags: 0
