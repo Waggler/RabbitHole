@@ -76,7 +76,11 @@ public class PauseMenuV2 : MonoBehaviour
         //set new selected object
         EventSystem.current.SetSelectedGameObject(pauseButton);
     }
-
+    public void QuitGame()
+    {
+        Application.Quit();
+        Debug.Log("Quit!");
+    }
     public void OpenOptions()
     {
         optionsMenu.SetActive(true);
