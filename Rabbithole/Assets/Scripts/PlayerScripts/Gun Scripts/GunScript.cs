@@ -22,8 +22,12 @@ public class GunScript : MonoBehaviour
     public AudioClip gunShot;
     public AudioClip reloadSound;
 
+    [Header("Animator")]
     public Animator animator;
     public Animator chadAnimator;
+
+    [Header("Cheats")]
+    public bool isBottomless;
 
 
     /*
@@ -45,28 +49,55 @@ public class GunScript : MonoBehaviour
         float controllerShooting = Input.GetAxis("RT");
         isChad = GameObject.Find("Player").GetComponent<ThirdPersonMovement>().isChad;
         // changed to use controller shooting and fire1 mouse shooting
-        if (controllerShooting >= 1 && Time.time >= nextTimeToFire && GameManager.Instance.ammo > 0 && GameManager.Instance.isReloading == false|| Input.GetButton("Fire1") && Time.time >= nextTimeToFire && GameManager.Instance.ammo > 0 && GameManager.Instance.isReloading == false)
-        {
-            nextTimeToFire = Time.time + 1f / fireRate;
-            Shoot();
-            animator.SetTrigger("Shoot");
-            chadAnimator.SetTrigger("Shoot");
-            animator.SetBool("isShooting", true);
-            GameManager.Instance.ammo -= 1;
-            GameManager.Instance.ammoUI.SetInteger("ammoAmount", GameManager.Instance.ammo);
-            audioSource.PlayOneShot(gunShot, 0.7f);
 
-        }
-        else
+        if (isBottomless == false)
         {
-            animator.SetBool("isShooting", false);
+            if (controllerShooting >= 1 && Time.time >= nextTimeToFire && GameManager.Instance.ammo > 0 && GameManager.Instance.isReloading == false || Input.GetButton("Fire1") && Time.time >= nextTimeToFire && GameManager.Instance.ammo > 0 && GameManager.Instance.isReloading == false)
+            {
+                nextTimeToFire = Time.time + 1f / fireRate;
+                Shoot();
+                animator.SetTrigger("Shoot");
+                chadAnimator.SetTrigger("Shoot");
+                animator.SetBool("isShooting", true);
+                GameManager.Instance.ammo -= 1;
+                GameManager.Instance.ammoUI.SetInteger("ammoAmount", GameManager.Instance.ammo);
+                audioSource.PlayOneShot(gunShot, 0.7f);
+
+            }
+            else
+            {
+                animator.SetBool("isShooting", false);
+            }
         }
+        else if (isBottomless == true)
+        {
+            if (controllerShooting >= 1 && Time.time >= nextTimeToFire || Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
+            {
+                nextTimeToFire = Time.time + 1f / fireRate;
+                Shoot();
+                animator.SetTrigger("Shoot");
+                chadAnimator.SetTrigger("Shoot");
+                animator.SetBool("isShooting", true);
+                
+                GameManager.Instance.ammoUI.SetInteger("ammoAmount", GameManager.Instance.ammo);
+                audioSource.PlayOneShot(gunShot, 0.7f);
+
+            }
+            else
+            {
+                animator.SetBool("isShooting", false);
+            }
+        }
+
 
         // this used to be Input.GetKeyDown(KeyCode.R)  now it works with both controller and keyboard
-        if (Input.GetButtonDown("Reload") && GameManager.Instance.isReloading == false && GameManager.Instance.ammo < 9)
+        if (isBottomless == false)
         {
-            audioSource.PlayOneShot(reloadSound, 0.7f);
-            StartCoroutine(routine: Reload());
+            if (Input.GetButtonDown("Reload") && GameManager.Instance.isReloading == false && GameManager.Instance.ammo < 9)
+            {
+                audioSource.PlayOneShot(reloadSound, 0.7f);
+                StartCoroutine(routine: Reload());
+            }
         }
     }// END Update
 
