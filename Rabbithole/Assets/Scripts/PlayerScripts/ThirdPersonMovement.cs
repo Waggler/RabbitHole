@@ -48,6 +48,7 @@ public class ThirdPersonMovement : MonoBehaviour
     [Header("Animator Settings")]
     Animator animator;
     public Animator moleAnimator;
+    public Animator chadAnimator;
 
     Camera mainCamera;
 
@@ -58,7 +59,13 @@ public class ThirdPersonMovement : MonoBehaviour
     public GameObject karatThreeUI;
 
     public int karatPieces;
+    
+
+    [Header("Chad Settings")]
     public bool isChad;
+    public GameObject nonChadGFX;
+    public GameObject Chad;
+    public float chadJumpHeight;
 
     // Locks Cursor
     private void Start()
@@ -99,12 +106,14 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             animator.SetTrigger("Jump");
+            chadAnimator.SetTrigger("Jumpin");
             animator.SetBool("isGrounded", false);
         }
 
         if (Input.GetButtonDown("Jump"))
         {
             animator.SetBool("isGrounded", false);
+            chadAnimator.SetBool("isGrounded", false);
         }
         
 
@@ -113,12 +122,13 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             glideTimer += Time.deltaTime;
             animator.SetBool("isFalling", true);
+            chadAnimator.SetBool("isFalling", true);
         }
 
         // Handles Gliding Logic
         if (Input.GetButtonDown("Jump") && !isGrounded && glideTimer > waitTime && bounced == false)
         {
-            if (!isGliding)
+            if (!isGliding && !isChad)
             {
                 speed = glideSpeed;
                 gravity = -5;
@@ -126,7 +136,7 @@ public class ThirdPersonMovement : MonoBehaviour
                 animator.SetBool("isGliding", true);
                 animator.SetBool("isFalling", false);
             }
-            else if (isGliding == true)
+            else if (isGliding == true && !isChad)
             {
                 speed = groundSpeed;
                 gravity = -30;
@@ -145,9 +155,11 @@ public class ThirdPersonMovement : MonoBehaviour
             glideTimer = 0;
             bounced = false;
             animator.SetBool("isGrounded", true);
+            chadAnimator.SetBool("isGrounded", true);
             animator.SetBool("isJumping", false);
             animator.SetBool("isFalling", false);
             animator.SetBool("isGliding", false);
+            chadAnimator.SetBool("isFalling", false);
         }
 
         if (Input.GetButtonDown("Jump") && !isGrounded && glideTimer > bounceWaitTime && bounced == true)
@@ -195,10 +207,20 @@ public class ThirdPersonMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
             animator.SetBool("isMoving", true);
+            chadAnimator.SetBool("isMoving", true);
         }
         else
         {
             animator.SetBool("isMoving", false);
+            chadAnimator.SetBool("isMoving", false);
+        }
+
+        if (isChad == true)
+        {
+            nonChadGFX.SetActive(false);
+            Chad.SetActive(true);
+            jumpHeight = chadJumpHeight;
+
         }
 
     }// END Update
@@ -277,10 +299,11 @@ public class ThirdPersonMovement : MonoBehaviour
             //PlayerBall.AddForce(Vector3.up * BouncingForce);
         }
 
-        if (other.CompareTag("Bullet"))
+        if (other.CompareTag("Bullet") && !isDashing)
         {
             hitPoints -= damageTaken;
         }
+
         IEnumerator MoleReset()
         {
             yield return new WaitForSeconds(3);
