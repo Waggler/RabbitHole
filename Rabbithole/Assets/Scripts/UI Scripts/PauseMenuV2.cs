@@ -153,5 +153,10 @@ public class PauseMenuV2 : MonoBehaviour
         gamePaused = false;
         SceneManager.LoadScene("Main Menu");
     }
-
+    public void Hub()
+    {
+        Time.timeScale = 1f;
+        gamePaused = false;
+        SceneManager.LoadScene("Hub");
+    }
 }
