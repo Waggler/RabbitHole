@@ -77,6 +77,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
     [Header("Cheats")]
     public bool isInvicible;
+    public GameObject invicibleUi;
 
     // Locks Cursor
     private void Start()
@@ -325,6 +326,15 @@ public class ThirdPersonMovement : MonoBehaviour
         if (other.CompareTag("Bullet") && !isDashing && !isInvicible)
         {
             hitPoints -= damageTaken;
+        }
+
+        if (isInvicible == true)
+        {
+            invicibleUi.SetActive(true);
+        }
+        else
+        {
+            invicibleUi.SetActive(false);
         }
 
         // Handles Mole Reset
