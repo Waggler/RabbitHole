@@ -29,6 +29,10 @@ public class FoxtrotShoot : MonoBehaviour
 
     public Animator animator;
 
+    //Audio
+    public AudioSource audiosource;
+    public AudioClip clip;
+
     private void Awake()
     {
         player = GameObject.Find("Player").transform;
@@ -121,6 +125,7 @@ public class FoxtrotShoot : MonoBehaviour
     {
         animator.SetTrigger("Shoot");
         yield return new WaitForSeconds(animShotDelay);
+        audiosource.PlayOneShot(clip);
         Rigidbody rb = Instantiate(projectile, bulletSpawn.position, this.transform.rotation).GetComponent<Rigidbody>();
         rb.AddForce(transform.forward * projectileHorizontalForce, ForceMode.Impulse);
         rb.AddForce(transform.up * projectileVerticalForce, ForceMode.Impulse);

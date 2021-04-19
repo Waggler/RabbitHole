@@ -52,6 +52,10 @@ public class ThirdPersonMovement : MonoBehaviour
 
     Camera mainCamera;
 
+    [Header("Audio Settings")]
+    public AudioSource audiosource;
+    public AudioClip clip;
+
     [Header("Karat UI")]
 
     public GameObject karatOneUI;
@@ -117,12 +121,13 @@ public class ThirdPersonMovement : MonoBehaviour
         }
 
         // Handles Jumping Logic
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded == true)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             animator.SetTrigger("Jump");
             chadAnimator.SetTrigger("Jumpin");
             animator.SetBool("isGrounded", false);
+            audiosource.PlayOneShot(clip);
         }
 
         // Handles Jump Anims
@@ -130,6 +135,7 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             animator.SetBool("isGrounded", false);
             chadAnimator.SetBool("isGrounded", false);
+            
         }
         
 

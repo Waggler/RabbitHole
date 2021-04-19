@@ -37,6 +37,11 @@ public class FoxGoonie : MonoBehaviour
 
     public Animator animator;
 
+    //Audio
+    public AudioSource audiosource;
+    public AudioClip clip;
+
+
     private void Awake()
     {
         player = GameObject.Find("Player").transform;
@@ -123,6 +128,7 @@ public class FoxGoonie : MonoBehaviour
 
             //Attack Code
             animator.SetTrigger("Shoot");
+            audiosource.PlayOneShot(clip);
             StartCoroutine(ShotDelay());
             Rigidbody rb = Instantiate(projectile, bulletSpawn.position, this.transform.rotation).GetComponent<Rigidbody>();
             //Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();//This Can be changed for the bullet to come at a specific position
