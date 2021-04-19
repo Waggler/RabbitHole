@@ -330,11 +330,11 @@ public class ThirdPersonMovement : MonoBehaviour
 
         if (isInvicible == true)
         {
-            invicibleUi.SetActive(true);
+            //invicibleUi.SetActive(true);
         }
         else
         {
-            invicibleUi.SetActive(false);
+            //invicibleUi.SetActive(false);
         }
 
         // Handles Mole Reset

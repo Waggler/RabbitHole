@@ -91,11 +91,11 @@ public class GunScript : MonoBehaviour
         }
         if (isBottomless == true)
         {
-            bottomlessUi.SetActive(true);
+            //bottomlessUi.SetActive(true);
         }
         else
         {
-            bottomlessUi.SetActive(false);
+            //bottomlessUi.SetActive(false);
         }
 
 

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1551305351}
-  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -672,7 +672,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 2.3994083, y: 1}
+    m_SensorSize: {x: 1.7771318, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -688,7 +688,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31583836}
-  m_LocalRotation: {x: -0.03921478, y: 0.26540774, z: 0.0108046755, w: 0.9632779}
+  m_LocalRotation: {x: -0.03979971, y: 0.20628504, z: 0.008397807, w: 0.9776461}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4891,7 +4891,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 2.3994083, y: 1}
+    m_SensorSize: {x: 1.7771318, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -8221,7 +8221,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 353504202}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Dialogues
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22054,7 +22054,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 2.3994083, y: 1}
+    m_SensorSize: {x: 1.7771318, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -22070,7 +22070,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973787068}
-  m_LocalRotation: {x: -0.03981499, y: 0.20449615, z: 0.00832498, w: 0.97802186}
+  m_LocalRotation: {x: -0.04017821, y: 0.155845, z: 0.0063444087, w: 0.98694366}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -24757,7 +24757,7 @@ GameObject:
   - component: {fileID: 1108172291}
   - component: {fileID: 1108172290}
   - component: {fileID: 1108172292}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: 1st Mole Dialogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25502,7 +25502,7 @@ GameObject:
   - component: {fileID: 1136554966}
   - component: {fileID: 1136554965}
   - component: {fileID: 1136554964}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: 1st Mole Dialogue (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36304,7 +36304,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 2.3994083, y: 1}
+    m_SensorSize: {x: 1.7771318, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -36320,7 +36320,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699908860}
-  m_LocalRotation: {x: -0.03981499, y: 0.20449615, z: 0.00832498, w: 0.97802186}
+  m_LocalRotation: {x: -0.04017821, y: 0.155845, z: 0.0063444087, w: 0.98694366}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -36819,7 +36819,8 @@ GameObject:
   - component: {fileID: 1735867188}
   - component: {fileID: 1735867187}
   - component: {fileID: 1735867186}
-  m_Layer: 0
+  - component: {fileID: 1735867189}
+  m_Layer: 2
   m_Name: Internal Monologue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36870,6 +36871,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 43.071, z: 0}
+--- !u!114 &1735867189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735867185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f13ee16a59b0e754face750b76911d36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 10
 --- !u!1 &1737402550
 GameObject:
   m_ObjectHideFlags: 0
@@ -42667,7 +42681,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043142685}
-  m_LocalRotation: {x: -0.0397074, y: 0.21675055, z: 0.008823851, w: 0.9753793}
+  m_LocalRotation: {x: -0.04011098, y: 0.16597013, z: 0.006756604, w: 0.98529154}
   m_LocalPosition: {x: -154, y: -42.392857, z: -1953.6754}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -44151,6 +44165,7 @@ MonoBehaviour:
   animator: {fileID: 2143083827}
   chadAnimator: {fileID: 295553679}
   isBottomless: 0
+  bottomlessUi: {fileID: 0}
 --- !u!23 &2143083830
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -44250,6 +44265,7 @@ MonoBehaviour:
   starsParticle: {fileID: 1002785618}
   timerParticle: {fileID: 0}
   isInvicible: 0
+  invicibleUi: {fileID: 0}
 --- !u!143 &2143083832
 CharacterController:
   m_ObjectHideFlags: 0
