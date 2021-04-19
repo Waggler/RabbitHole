@@ -545,7 +545,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31583836}
-  m_LocalRotation: {x: -0.040435832, y: 0.108419634, z: 0.00441373, w: 0.9932727}
+  m_LocalRotation: {x: -0.039798934, y: 0.20637234, z: 0.008401357, w: 0.97762775}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1693,7 +1693,7 @@ MonoBehaviour:
   m_LookaheadIgnoreY: 0
   m_HorizontalDamping: 0
   m_VerticalDamping: 0
-  m_ScreenX: 0.35
+  m_ScreenX: 0.28
   m_ScreenY: 0.5
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
@@ -4191,7 +4191,7 @@ MonoBehaviour:
   m_LookaheadIgnoreY: 0
   m_HorizontalDamping: 0
   m_VerticalDamping: 0
-  m_ScreenX: 0.35
+  m_ScreenX: 0.2
   m_ScreenY: 0.5
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
@@ -8639,7 +8639,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973787068}
-  m_LocalRotation: {x: -0.040435832, y: 0.108419634, z: 0.00441373, w: 0.9932727}
+  m_LocalRotation: {x: -0.040177733, y: 0.15591486, z: 0.006347248, w: 0.98693264}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -10794,7 +10794,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 0e6a10d641c319f4392a9eedc879113c,
     type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 17b35d63bfc622341a3b793eef579f4a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
@@ -10893,6 +10893,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 0e6a10d641c319f4392a9eedc879113c, type: 2}
+  bClip: 0
+  invincible: 0
   gameisPaused: 0
 --- !u!1 &1273430406
 GameObject:
@@ -12335,7 +12337,7 @@ MonoBehaviour:
   m_LookaheadIgnoreY: 0
   m_HorizontalDamping: 0.25
   m_VerticalDamping: 0.25
-  m_ScreenX: 0.35
+  m_ScreenX: 0.28
   m_ScreenY: 0.5
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
@@ -13884,7 +13886,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699908860}
-  m_LocalRotation: {x: -0.040435832, y: 0.108419634, z: 0.00441373, w: 0.9932727}
+  m_LocalRotation: {x: -0.040177733, y: 0.15591486, z: 0.006347248, w: 0.98693264}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -15784,7 +15786,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043142685}
-  m_LocalRotation: {x: 0.040435836, y: -0.108419634, z: -0.0044137305, w: -0.9932727}
+  m_LocalRotation: {x: -0.040110413, y: 0.16604352, z: 0.006759581, w: 0.98527914}
   m_LocalPosition: {x: -12.46, y: 7.2171426, z: 33.82457}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -16749,7 +16751,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2143083825}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.10452846, z: 0, w: 0.9945219}
   m_LocalPosition: {x: -12.46, y: 6.98, z: 39.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -16760,7 +16762,7 @@ Transform:
   - {fileID: 611122637}
   m_Father: {fileID: 0}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 12, z: 0}
 --- !u!95 &2143083827
 Animator:
   serializedVersion: 3
@@ -16901,6 +16903,7 @@ MonoBehaviour:
   reloadSound: {fileID: 8300000, guid: fc630610b9aac2643b9beb4d03d6edb4, type: 3}
   animator: {fileID: 2143083827}
   chadAnimator: {fileID: 1078685372}
+  isBottomless: 0
 --- !u!23 &2143083830
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16994,9 +16997,10 @@ MonoBehaviour:
   isChad: 0
   nonChadGFX: {fileID: 1816298147}
   Chad: {fileID: 611122636}
-  chadJumpHeight: 3
+  chadJumpHeight: 8
   starsParticle: {fileID: 0}
   timerParticle: {fileID: 0}
+  isInvicible: 0
 --- !u!143 &2143083832
 CharacterController:
   m_ObjectHideFlags: 0
