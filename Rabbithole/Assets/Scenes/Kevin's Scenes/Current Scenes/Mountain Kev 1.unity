@@ -1175,7 +1175,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.7800688, y: 1}
+    m_SensorSize: {x: 1.7771318, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1191,7 +1191,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31583836}
-  m_LocalRotation: {x: -0.040435303, y: 0.10854194, z: 0.0044187107, w: 0.9932594}
+  m_LocalRotation: {x: -0.04043609, y: 0.108369134, z: 0.0044116783, w: 0.9932782}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5792,7 +5792,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.7800688, y: 1}
+    m_SensorSize: {x: 1.7771318, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -5874,7 +5874,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 187221051}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -210.24, y: -27.212856, z: -1617.8154}
+  m_LocalPosition: {x: -154, y: -42.392857, z: -1953.6754}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 973787070}
@@ -21605,7 +21605,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.7800688, y: 1}
+    m_SensorSize: {x: 1.7771318, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -21621,7 +21621,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973787068}
-  m_LocalRotation: {x: -0.040435303, y: 0.10854194, z: 0.0044187107, w: 0.9932594}
+  m_LocalRotation: {x: -0.04043609, y: 0.10836913, z: 0.004411678, w: 0.9932782}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -22090,6 +22090,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000848659}
   m_Mesh: {fileID: 1006839606539870910, guid: 86c8d29d238a8f14390aec48ee8ced0c, type: 3}
+--- !u!1 &1002785618 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4152646921172799273, guid: 37a91aa9c781ebf4f9f6c92bc645d782,
+    type: 3}
+  m_PrefabInstance: {fileID: 1779016692}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1005238367
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35518,7 +35524,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.7800688, y: 1}
+    m_SensorSize: {x: 1.7771318, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -35534,7 +35540,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699908860}
-  m_LocalRotation: {x: -0.040435325, y: 0.10854194, z: 0.004418713, w: 0.9932594}
+  m_LocalRotation: {x: -0.04043609, y: 0.10836913, z: 0.004411678, w: 0.9932782}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -41733,8 +41739,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043142685}
-  m_LocalRotation: {x: 0.04043529, y: -0.10854194, z: -0.00441871, w: -0.9932594}
-  m_LocalPosition: {x: -210.24, y: -27.212856, z: -1617.8154}
+  m_LocalRotation: {x: 0.04043606, y: -0.108369134, z: -0.004411675, w: -0.9932782}
+  m_LocalPosition: {x: -154, y: -42.392857, z: -1953.6754}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -43021,7 +43027,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2143083825}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -210.24, y: -27.45, z: -1612.14}
+  m_LocalPosition: {x: -154, y: -42.63, z: -1948}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1316677705}
@@ -43242,7 +43248,7 @@ MonoBehaviour:
   groundDistance: 0.4
   groundMask:
     serializedVersion: 2
-    m_Bits: 768
+    m_Bits: 512
   velocity: {x: 0, y: 0, z: 0}
   turnSpeed: 15
   isDashing: 0
@@ -43266,6 +43272,8 @@ MonoBehaviour:
   nonChadGFX: {fileID: 0}
   Chad: {fileID: 295553677}
   chadJumpHeight: 0
+  starsParticle: {fileID: 1002785618}
+  timerParticle: {fileID: 0}
 --- !u!143 &2143083832
 CharacterController:
   m_ObjectHideFlags: 0

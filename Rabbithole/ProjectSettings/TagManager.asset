@@ -15,6 +15,7 @@ TagManager:
   - HCarrot
   - GoldKarat
   - TimePickup
+  - tutPickup
   layers:
   - Default
   - TransparentFX

@@ -67,6 +67,10 @@ public class ThirdPersonMovement : MonoBehaviour
     public GameObject Chad;
     public float chadJumpHeight;
 
+    [Header("Particle Effects")]
+    public GameObject starsParticle;
+    public GameObject timerParticle;
+
     // Locks Cursor
     private void Start()
     {
@@ -259,8 +263,11 @@ public class ThirdPersonMovement : MonoBehaviour
             gravity = -30;
             isGliding = false;
             velocity.y = Mathf.Sqrt(bounceHeightOne * -10f * gravity);
+            StartCoroutine("particleStars");
             StartCoroutine(MoleReset());
             //PlayerBall.AddForce(Vector3.up * BouncingForce);
+            GameObject gObject = Instantiate(starsParticle, transform.position, Quaternion.identity) as GameObject;
+            Destroy(gObject, 3);
         }
 
         if (other.CompareTag("Mole2"))
@@ -271,6 +278,7 @@ public class ThirdPersonMovement : MonoBehaviour
             speed = groundSpeed;
             gravity = -30;
             isGliding = false;
+            StartCoroutine("particleStars");
             StartCoroutine(MoleReset());
             velocity.y = Mathf.Sqrt(bounceHeightTwo * -10f * gravity);
 
@@ -285,6 +293,7 @@ public class ThirdPersonMovement : MonoBehaviour
             speed = groundSpeed;
             gravity = -30;
             isGliding = false;
+            StartCoroutine("particleStars");
             StartCoroutine(MoleReset());
             velocity.y = Mathf.Sqrt(bounceHeightThird * -10f * gravity);
 
@@ -298,6 +307,7 @@ public class ThirdPersonMovement : MonoBehaviour
             speed = groundSpeed;
             gravity = -30;
             isGliding = false;
+            StartCoroutine("particleStars");
             StartCoroutine(MoleReset());
             velocity.y = Mathf.Sqrt(bounceHeightFour * -10f * gravity);
 
@@ -350,12 +360,29 @@ public class ThirdPersonMovement : MonoBehaviour
         //Timer Pickup
         if (other.gameObject.CompareTag("TimePickup"))
         {
-                GameManager.Instance.timeReduced += 5f;
-                Destroy(other.gameObject);
+            GameManager.Instance.timeReduced += 5f;
+            StartCoroutine("particleTimer");
+            //GameObject gObject = Instantiate(timerParticle, transform.position, Quaternion.identity);
+            //Destroy(gObject, 3);
+            Destroy(other.gameObject);
         }
             else
 
             return;
+    }
+
+    IEnumerator particleTimer()
+    {
+        timerParticle.SetActive(true);
+        yield return new WaitForSeconds(2);
+        timerParticle.SetActive(false);
+    }
+
+    IEnumerator particleStars()
+    {
+        starsParticle.SetActive(true);
+        yield return new WaitForSeconds(2);
+        starsParticle.SetActive(false);
     }
 
 }
