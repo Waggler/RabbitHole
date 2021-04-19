@@ -17009,6 +17009,7 @@ MonoBehaviour:
   gunShot: {fileID: 8300000, guid: 329ca4713529f8045bef88de2448ba83, type: 3}
   reloadSound: {fileID: 8300000, guid: fc630610b9aac2643b9beb4d03d6edb4, type: 3}
   animator: {fileID: 2143083827}
+  chadAnimator: {fileID: 1078685372}
 --- !u!23 &2143083830
 MeshRenderer:
   m_ObjectHideFlags: 0
