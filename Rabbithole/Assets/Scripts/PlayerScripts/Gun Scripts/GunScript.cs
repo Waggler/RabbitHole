@@ -28,6 +28,7 @@ public class GunScript : MonoBehaviour
 
     [Header("Cheats")]
     public bool isBottomless;
+    public GameObject bottomlessUi;
 
 
     /*
@@ -87,6 +88,14 @@ public class GunScript : MonoBehaviour
             {
                 animator.SetBool("isShooting", false);
             }
+        }
+        if (isBottomless == true)
+        {
+            bottomlessUi.SetActive(true);
+        }
+        else
+        {
+            bottomlessUi.SetActive(false);
         }
 
 
