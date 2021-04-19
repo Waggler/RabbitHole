@@ -52,7 +52,7 @@ public class GunScript : MonoBehaviour
 
         if (isBottomless == false)
         {
-            if (controllerShooting >= 1 && Time.time >= nextTimeToFire && GameManager.Instance.ammo > 0 && GameManager.Instance.isReloading == false || Input.GetButton("Fire1") && Time.time >= nextTimeToFire && GameManager.Instance.ammo > 0 && GameManager.Instance.isReloading == false)
+            if (controllerShooting >= 1 && Time.time >= nextTimeToFire && GameManager.Instance.ammo > 0 && GameManager.Instance.isReloading == false && PauseMenuV2.gamePaused == false || Input.GetButton("Fire1") && Time.time >= nextTimeToFire && GameManager.Instance.ammo > 0 && GameManager.Instance.isReloading == false & PauseMenuV2.gamePaused == false)
             {
                 nextTimeToFire = Time.time + 1f / fireRate;
                 Shoot();
@@ -69,7 +69,7 @@ public class GunScript : MonoBehaviour
                 animator.SetBool("isShooting", false);
             }
         }
-        else if (isBottomless == true)
+        else if (isBottomless == true && PauseMenuV2.gamePaused == false)
         {
             if (controllerShooting >= 1 && Time.time >= nextTimeToFire || Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
             {
@@ -91,7 +91,7 @@ public class GunScript : MonoBehaviour
 
 
         // this used to be Input.GetKeyDown(KeyCode.R)  now it works with both controller and keyboard
-        if (isBottomless == false)
+        if (isBottomless == false && PauseMenuV2.gamePaused == false)
         {
             if (Input.GetButtonDown("Reload") && GameManager.Instance.isReloading == false && GameManager.Instance.ammo < 9)
             {
