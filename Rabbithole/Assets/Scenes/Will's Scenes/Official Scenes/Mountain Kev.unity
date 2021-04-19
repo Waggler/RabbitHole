@@ -1191,7 +1191,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31583836}
-  m_LocalRotation: {x: -0.040435854, y: 0.10841966, z: 0.0044137337, w: 0.9932727}
+  m_LocalRotation: {x: -0.040435858, y: 0.10841966, z: 0.0044137337, w: 0.9932727}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5873,7 +5873,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 187221051}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -155.58, y: -41.402855, z: -1955.4054}
+  m_LocalPosition: {x: -155.58, y: -39.872856, z: -1955.4054}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 973787070}
@@ -21274,7 +21274,7 @@ PrefabInstance:
     - target: {fileID: 3264465854945611951, guid: 4c2b2ee9b807e2545bfc503d46ff883e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3264465854945611951, guid: 4c2b2ee9b807e2545bfc503d46ff883e,
         type: 3}
@@ -21587,7 +21587,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973787068}
-  m_LocalRotation: {x: -0.040435858, y: 0.10841966, z: 0.0044137337, w: 0.9932727}
+  m_LocalRotation: {x: -0.040435854, y: 0.10841966, z: 0.0044137337, w: 0.9932727}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -35469,7 +35469,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699908860}
-  m_LocalRotation: {x: -0.040435854, y: 0.10841966, z: 0.0044137337, w: 0.9932727}
+  m_LocalRotation: {x: -0.040435858, y: 0.10841966, z: 0.0044137337, w: 0.9932727}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -41583,12 +41583,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043142685}
-  m_LocalRotation: {x: 0.040435836, y: -0.10841966, z: -0.004413732, w: -0.9932727}
-  m_LocalPosition: {x: -155.58, y: -41.402855, z: -1955.4054}
+  m_LocalRotation: {x: 0.040435836, y: -0.10841966, z: -0.0044137314, w: -0.9932727}
+  m_LocalPosition: {x: -155.58, y: -39.872856, z: -1955.4054}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2043142688
 MonoBehaviour:
@@ -42871,7 +42871,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2143083825}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -155.58, y: -41.64, z: -1949.73}
+  m_LocalPosition: {x: -155.58, y: -40.11, z: -1949.73}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1316677705}
@@ -43019,6 +43019,8 @@ MonoBehaviour:
   audioSource: {fileID: 2143083828}
   gunShot: {fileID: 8300000, guid: 329ca4713529f8045bef88de2448ba83, type: 3}
   reloadSound: {fileID: 8300000, guid: fc630610b9aac2643b9beb4d03d6edb4, type: 3}
+  animator: {fileID: 835666257}
+  chadAnimator: {fileID: 0}
 --- !u!23 &2143083830
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -43091,6 +43093,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 768
   velocity: {x: 0, y: 0, z: 0}
+  turnSpeed: 15
   isDashing: 0
   dashDistance: 5
   dashCooldown: 2
@@ -43103,12 +43106,15 @@ MonoBehaviour:
   hitPoints: 8
   damageTaken: 1
   moleAnimator: {fileID: 1211499544}
-  turnSpeed: 15
+  chadAnimator: {fileID: 0}
   karatOneUI: {fileID: 0}
   karatTwoUI: {fileID: 0}
   karatThreeUI: {fileID: 0}
   karatPieces: 0
   isChad: 0
+  nonChadGFX: {fileID: 835666255}
+  Chad: {fileID: 0}
+  chadJumpHeight: 0
 --- !u!143 &2143083832
 CharacterController:
   m_ObjectHideFlags: 0
