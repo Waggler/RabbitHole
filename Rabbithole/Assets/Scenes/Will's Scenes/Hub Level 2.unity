@@ -1036,7 +1036,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31583836}
-  m_LocalRotation: {x: -0.04043584, y: 0.10841964, z: 0.0044137314, w: 0.9932727}
+  m_LocalRotation: {x: -0.039798927, y: 0.20637234, z: 0.008401355, w: 0.97762775}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2155,7 +2155,7 @@ MonoBehaviour:
   m_LookaheadIgnoreY: 0
   m_HorizontalDamping: 0
   m_VerticalDamping: 0
-  m_ScreenX: 0.35
+  m_ScreenX: 0.28
   m_ScreenY: 0.5
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
@@ -3626,7 +3626,7 @@ MonoBehaviour:
   m_LookaheadIgnoreY: 0
   m_HorizontalDamping: 0
   m_VerticalDamping: 0
-  m_ScreenX: 0.35
+  m_ScreenX: 0.2
   m_ScreenY: 0.5
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
@@ -3880,16 +3880,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 310a3a7f7294b804aa49ae366be4a846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tut1check: 0
-  tut2Check: 0
-  tut3Check: 0
-  target1: {fileID: 2728601574874741908}
-  target2: {fileID: 2074299827}
-  target3: {fileID: 6316775308349173239}
-  pickup: {fileID: 1516787261}
-  log1: {fileID: 388495831}
-  log2: {fileID: 429627446}
-  log3: {fileID: 806245748}
 --- !u!1 &562614248
 GameObject:
   m_ObjectHideFlags: 0
@@ -6868,7 +6858,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973787068}
-  m_LocalRotation: {x: -0.04043585, y: 0.108419634, z: 0.0044137323, w: 0.9932727}
+  m_LocalRotation: {x: -0.040177744, y: 0.15591486, z: 0.006347249, w: 0.98693264}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -10622,7 +10612,7 @@ MonoBehaviour:
   m_LookaheadIgnoreY: 0
   m_HorizontalDamping: 0.25
   m_VerticalDamping: 0.25
-  m_ScreenX: 0.35
+  m_ScreenX: 0.28
   m_ScreenY: 0.5
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
@@ -10841,12 +10831,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1493500696}
   m_CullTransparentMesh: 0
---- !u!1 &1516787261 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3081068596224449848, guid: 5cdb68d3dbc909c489cd7fbfa91359d6,
-    type: 3}
-  m_PrefabInstance: {fileID: 1749985813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1551305350
 GameObject:
   m_ObjectHideFlags: 0
@@ -11795,7 +11779,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699908860}
-  m_LocalRotation: {x: -0.04043584, y: 0.10841964, z: 0.0044137314, w: 0.9932727}
+  m_LocalRotation: {x: -0.040177744, y: 0.15591486, z: 0.006347249, w: 0.98693264}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -11850,9 +11834,12 @@ MonoBehaviour:
   dialogue:
     name: Jacklyn Rabot
     sentences:
-    - Intro
-    - Intro
-    - Intro
+    - 'Hey Gunny, you ready for a fight? Commander Foxtrot and his goon squad are
+      trying to take over our island. '
+    - "I\u2019m all ready to lock n\u2019 load, but you\u2019re looking a little
+      rusty."
+    - Once you're all set, you can dig your way through to the rest of the places
+      these foces have infested.
     - So you remember how to get around right?  Use WASD on your keyboard or the
       left stick to move. And you can hop using the Spacebar or by pressing the A
       button.
@@ -14004,7 +13991,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043142685}
-  m_LocalRotation: {x: 0.040435836, y: -0.10841964, z: -0.004413731, w: -0.9932727}
+  m_LocalRotation: {x: -0.04011044, y: 0.16604352, z: 0.006759586, w: 0.98527914}
   m_LocalPosition: {x: -104.85, y: 2.6471431, z: -5.6554284}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -14806,6 +14793,7 @@ MonoBehaviour:
   reloadSound: {fileID: 8300000, guid: fc630610b9aac2643b9beb4d03d6edb4, type: 3}
   animator: {fileID: 2143083827}
   chadAnimator: {fileID: 1149603221}
+  isBottomless: 0
 --- !u!23 &2143083830
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14876,7 +14864,7 @@ MonoBehaviour:
   groundDistance: 0.4
   groundMask:
     serializedVersion: 2
-    m_Bits: 768
+    m_Bits: 512
   velocity: {x: 0, y: 0, z: 0}
   turnSpeed: 15
   isDashing: 0
@@ -14902,6 +14890,7 @@ MonoBehaviour:
   chadJumpHeight: 0
   starsParticle: {fileID: 0}
   timerParticle: {fileID: 0}
+  isInvicible: 0
 --- !u!143 &2143083832
 CharacterController:
   m_ObjectHideFlags: 0
