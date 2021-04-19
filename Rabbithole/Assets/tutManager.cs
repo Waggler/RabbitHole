@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class tutManager : MonoBehaviour
+public class TutManager : MonoBehaviour
 {
 
     public bool tut1check;
@@ -18,6 +18,8 @@ public class tutManager : MonoBehaviour
     public GameObject log1;
     public GameObject log2;
     public GameObject log3;
+
+    public bool tutComplete;
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +50,7 @@ public class tutManager : MonoBehaviour
             log1.SetActive(false);
             log2.SetActive(false);
             log3.SetActive(false);
+            tutComplete = true;
         }
 
     }

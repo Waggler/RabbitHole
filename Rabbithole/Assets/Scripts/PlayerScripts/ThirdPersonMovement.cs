@@ -71,6 +71,9 @@ public class ThirdPersonMovement : MonoBehaviour
     public GameObject starsParticle;
     public GameObject timerParticle;
 
+    [Header("Cheats")]
+    public bool isInvicible;
+
     // Locks Cursor
     private void Start()
     {
@@ -93,6 +96,7 @@ public class ThirdPersonMovement : MonoBehaviour
         // Checks if player is grounded
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, yawCamera, 0), turnSpeed * Time.fixedDeltaTime);
+
         // Handles Movement Logic
         if (direction.magnitude >= 0.1f && PauseMenuV2.gamePaused == false)
         {
@@ -121,6 +125,7 @@ public class ThirdPersonMovement : MonoBehaviour
             animator.SetBool("isGrounded", false);
         }
 
+        // Handles Jump Anims
         if (Input.GetButtonDown("Jump"))
         {
             animator.SetBool("isGrounded", false);
@@ -173,6 +178,7 @@ public class ThirdPersonMovement : MonoBehaviour
             chadAnimator.SetBool("isFalling", false);
         }
 
+        // Handles Gliding after Bounce
         if (Input.GetButtonDown("Jump") && !isGrounded && glideTimer > bounceWaitTime && bounced == true)
         {
             if (!isGliding)
@@ -210,20 +216,13 @@ public class ThirdPersonMovement : MonoBehaviour
         velocity.y /= 1 + Drag.y * Time.deltaTime;
         velocity.z /= 1 + Drag.z * Time.deltaTime;
 
+        // Handles Player Death
         if (hitPoints <= 0)
         {
             gameObject.SetActive(false);
         }
 
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
-        {
-            
-        }
-        else
-        {
-            
-        }
-
+        // Handles Chad Transformation
         if (isChad == true)
         {
             nonChadGFX.SetActive(false);
@@ -234,6 +233,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
     }// END Update
 
+    // Handles Dash Cooldown
     private IEnumerator Dash()
     {
         velocity += Vector3.Scale(transform.forward, dashDistance * new Vector3((Mathf.Log(1f / (Time.deltaTime * Drag.x + 1)) / -Time.deltaTime), 0, (Mathf.Log(1f / (Time.deltaTime * Drag.z + 1)) / -Time.deltaTime)));
@@ -252,6 +252,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
     }*/
 
+    // Handles Collisions
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Mole1"))
@@ -314,16 +315,20 @@ public class ThirdPersonMovement : MonoBehaviour
             //PlayerBall.AddForce(Vector3.up * BouncingForce);
         }
 
-        if (other.CompareTag("Bullet") && !isDashing)
+        // Handles Taking Damage
+        if (other.CompareTag("Bullet") && !isDashing && !isInvicible)
         {
             hitPoints -= damageTaken;
         }
 
+        // Handles Mole Reset
         IEnumerator MoleReset()
         {
             yield return new WaitForSeconds(3);
             moleAnimator.SetBool("IsJumpedOn", false);
         }
+
+        // Handles GoldenKarat powerup
         if (other.CompareTag("GoldKarat"))
         {
             Destroy(other.gameObject);
@@ -344,8 +349,14 @@ public class ThirdPersonMovement : MonoBehaviour
             }
         }
 
-        // Health Pickup
-        if (other.gameObject.CompareTag("HCarrot"))
+        // Handles Tutorial Pickup
+        if (other.gameObject.CompareTag("tutPickup"))
+        {
+            other.gameObject.SetActive(false);
+        }
+
+            // Health Pickup
+            if (other.gameObject.CompareTag("HCarrot"))
         {
             if (GameManager.Instance.health < 8)
             {
@@ -371,6 +382,7 @@ public class ThirdPersonMovement : MonoBehaviour
             return;
     }
 
+    // Handles timer on timer particle effects
     IEnumerator particleTimer()
     {
         timerParticle.SetActive(true);
@@ -378,6 +390,7 @@ public class ThirdPersonMovement : MonoBehaviour
         timerParticle.SetActive(false);
     }
 
+    // Handles timer on stars particle effects
     IEnumerator particleStars()
     {
         starsParticle.SetActive(true);
