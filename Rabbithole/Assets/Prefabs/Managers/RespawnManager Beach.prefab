@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8850770514442058813}
   - component: {fileID: 8850770514442058811}
   m_Layer: 0
-  m_Name: RespawnManager
+  m_Name: RespawnManager Beach
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57,5 +57,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 866.5, y: 82.31, z: 974.1}
-  m_Center: {x: 127.61, y: -135.3, z: 114.2}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}

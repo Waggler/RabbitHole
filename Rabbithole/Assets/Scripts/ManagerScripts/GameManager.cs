@@ -82,8 +82,8 @@ public class GameManager : MonoBehaviour
 
         if (health <= 0)
         {
-            targetScene = "Lose Screen";
-            ChangeScene();
+            SceneManager.LoadScene("Lose Screen");
+            health = maxHealth;
         }
         if(tut1Check == true && tut2Check == true && tut3Check == true)
         {
