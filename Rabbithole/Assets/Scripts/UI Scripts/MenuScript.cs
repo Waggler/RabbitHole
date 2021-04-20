@@ -20,7 +20,7 @@ public class MenuScript : MonoBehaviour
     public AudioClip button;
     public void PlayGame()
     {
-        SceneManager.LoadScene("Hub Level");
+        SceneManager.LoadScene("Hub");
         Debug.Log("Play!");
     }
 

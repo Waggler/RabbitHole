@@ -746,6 +746,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 0e6a10d641c319f4392a9eedc879113c, type: 2}
   bClip: 0
+  bClipUI: {fileID: 0}
+  invincibleUI: {fileID: 0}
   invincible: 0
   gameisPaused: 0
 --- !u!1 &183221159
@@ -2498,7 +2500,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 21300000, guid: 36c168d06222a084ebd627c1331f612f, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: bb9d8835da46e2c42a6c6580ff945780, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -2516,7 +2518,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 159903915}
         m_TargetAssemblyTypeName: Settings, Assembly-CSharp
-        m_MethodName: invincibility
+        m_MethodName: Invincibility
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2595,7 +2597,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 21300000, guid: 36c168d06222a084ebd627c1331f612f, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: bb9d8835da46e2c42a6c6580ff945780, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
