@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
     {
         if(ammoUI == null)
         {
-            //ammoUI = GameObject.Find("Magazine");
+            ammoUI = GameObject.Find("Magazine").GetComponentInChildren<Animator>();
         }
 
         if (isReloading == true)
@@ -98,12 +98,15 @@ public class GameManager : MonoBehaviour
 
     public void ChangeScene()
     {
-        SceneManager.LoadSceneAsync(targetScene);
+        SceneManager.LoadScene(targetScene);
+        ammo = maxAmmo;
+        health = maxHealth;
         currentScene = targetScene;
+
     }
 
     public void RestartScene()
     {
-        SceneManager.LoadSceneAsync(targetScene);
+        SceneManager.LoadScene(targetScene);
     }
 }
