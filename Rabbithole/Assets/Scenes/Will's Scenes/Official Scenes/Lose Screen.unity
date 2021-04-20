@@ -887,8 +887,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 159903913}
-        m_TargetAssemblyTypeName: WinScreen, Assembly-CSharp
-        m_MethodName: 
+        m_TargetAssemblyTypeName: EndScreen, Assembly-CSharp
+        m_MethodName: Retry
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
