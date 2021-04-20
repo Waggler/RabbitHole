@@ -73,6 +73,11 @@ public class GameManager : MonoBehaviour
             ammoUI = GameObject.Find("Magazine").GetComponentInChildren<Animator>();
         }
 
+        if(player == null)
+        {
+            player = GameObject.Find("Player");
+        }
+
         if (isReloading == true)
         {
             ammoUI.SetBool("isReloading", true);
@@ -82,9 +87,9 @@ public class GameManager : MonoBehaviour
 
         if (health <= 0)
         {
-            targetScene = "Lose Screen";
-            ChangeScene();
+            SceneManager.LoadScene("Lose Screen");
         }
+        
         if(tut1Check == true && tut2Check == true && tut3Check == true)
         {
             tutComplete = true;

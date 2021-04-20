@@ -8,12 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Will's Scenes/Official Scenes/Main Menu.unity
     guid: ba90b8c682526c142be9fced8915a7e1
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Will's Scenes/Official Scenes/Hub.unity
     guid: 03814f6236937dc4b8bfb59a43e7ea52
