@@ -69,6 +69,20 @@ public class BeachManager : MonoBehaviour
             Quaternion spawnRotation = Quaternion.identity;
             Instantiate(HCarrot, carrotPoint.position, spawnRotation);
         }
+
+        if(timeRemaining <= 0)
+        {
+            GameManager.Instance.level2Complete = true;
+            if (GameManager.Instance.allLevelsComplete == true)
+            {
+                GameManager.Instance.targetScene = "Win Screen";
+            }
+            else
+            {
+                GameManager.Instance.targetScene = "Hub";
+            }
+            GameManager.Instance.ChangeScene();
+        }
     }
     IEnumerator SpawnEnemies()
     {

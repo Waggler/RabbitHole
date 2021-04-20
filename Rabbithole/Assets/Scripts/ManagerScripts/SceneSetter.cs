@@ -12,17 +12,25 @@ public class SceneSetter : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            GameManager.Instance.targetScene = targetScene;
-            GameManager.Instance.ChangeScene();
-            if(isGoal1 == true)
+            if (isGoal1 == true)
             {
-                GameManager.Instance.level1Complete = true;
+                    GameManager.Instance.level1Complete = true;
             }
 
-            if(isGoal3 == true)
+            if (isGoal3 == true)
             {
-                GameManager.Instance.level3Complete = true;
+                    GameManager.Instance.level3Complete = true;
             }
+
+            if (GameManager.Instance.allLevelsComplete == true)
+            {
+                GameManager.Instance.targetScene = "Win Screen";
+            }
+            else
+            {
+                GameManager.Instance.targetScene = targetScene;
+            }
+            GameManager.Instance.ChangeScene();
         }
     }
 }

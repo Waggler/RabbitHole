@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     public bool level1Complete = false;
     public bool level2Complete = false;
     public bool level3Complete = false;
+    public bool allLevelsComplete = false;
 
     [Header("Scene Transitions")]
     public string currentScene;
@@ -78,6 +79,11 @@ public class GameManager : MonoBehaviour
         if(tut1Check == true && tut2Check == true && tut3Check == true)
         {
             tutComplete = true;
+        }
+
+        if(level1Complete && level2Complete && level3Complete)
+        {
+            allLevelsComplete = true;
         }
     }
 
