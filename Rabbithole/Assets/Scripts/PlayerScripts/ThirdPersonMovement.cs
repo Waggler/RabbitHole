@@ -115,7 +115,8 @@ public class ThirdPersonMovement : MonoBehaviour
         if (direction.magnitude >= 0.1f && PauseMenuV2.gamePaused == false)
         {
             animator.SetBool("isMoving", true);
-            chadAnimator.SetBool("isMoving", true);
+            if (isChad == true)
+                chadAnimator.SetBool("isMoving", true);
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
             //transform.rotation = Quaternion.Euler(0f, angle, 0f);
@@ -127,7 +128,10 @@ public class ThirdPersonMovement : MonoBehaviour
         else
         {
             animator.SetBool("isMoving", false);
-            chadAnimator.SetBool("isMoving", false);
+            if (isChad == true)
+            {
+                chadAnimator.SetBool("isMoving", false);
+            }
         }
 
         // Handles Jumping Logic
@@ -135,16 +139,18 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             animator.SetTrigger("Jump");
-            chadAnimator.SetTrigger("Jumpin");
+            if (isChad == true)
+                chadAnimator.SetTrigger("Jumpin");
             animator.SetBool("isGrounded", false);
-            audiosource.PlayOneShot(clip);
+            //audiosource.PlayOneShot(clip);
         }
 
         // Handles Jump Anims
         if (Input.GetButtonDown("Jump"))
         {
             animator.SetBool("isGrounded", false);
-            chadAnimator.SetBool("isGrounded", false);
+            if (isChad == true)
+                chadAnimator.SetBool("isGrounded", false);
             
         }
         
@@ -154,7 +160,8 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             glideTimer += Time.deltaTime;
             animator.SetBool("isFalling", true);
-            chadAnimator.SetBool("isFalling", true);
+            if (isChad == true)
+                chadAnimator.SetBool("isFalling", true);
         }
 
         // Handles Gliding Logic
@@ -187,11 +194,13 @@ public class ThirdPersonMovement : MonoBehaviour
             glideTimer = 0;
             bounced = false;
             animator.SetBool("isGrounded", true);
-            chadAnimator.SetBool("isGrounded", true);
+            if (isChad == true)
+                chadAnimator.SetBool("isGrounded", true);
             animator.SetBool("isJumping", false);
             animator.SetBool("isFalling", false);
             animator.SetBool("isGliding", false);
-            chadAnimator.SetBool("isFalling", false);
+            if (isChad == true)
+                chadAnimator.SetBool("isFalling", false);
         }
 
         // Handles Gliding after Bounce

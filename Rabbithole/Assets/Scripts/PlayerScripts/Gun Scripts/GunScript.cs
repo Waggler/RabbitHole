@@ -67,7 +67,8 @@ public class GunScript : MonoBehaviour
                 nextTimeToFire = Time.time + 1f / fireRate;
                 Shoot();
                 animator.SetTrigger("Shoot");
-                chadAnimator.SetTrigger("Shoot");
+                if (isChad == true)
+                    chadAnimator.SetTrigger("Shoot");
                 animator.SetBool("isShooting", true);
                 GameManager.Instance.ammo -= 1;
                 GameManager.Instance.ammoUI.SetInteger("ammoAmount", GameManager.Instance.ammo);
@@ -86,7 +87,8 @@ public class GunScript : MonoBehaviour
                 nextTimeToFire = Time.time + 1f / fireRate;
                 Shoot();
                 animator.SetTrigger("Shoot");
-                chadAnimator.SetTrigger("Shoot");
+                if (isChad == true)
+                    chadAnimator.SetTrigger("Shoot");
                 animator.SetBool("isShooting", true);
                 
                 GameManager.Instance.ammoUI.SetInteger("ammoAmount", GameManager.Instance.ammo);
