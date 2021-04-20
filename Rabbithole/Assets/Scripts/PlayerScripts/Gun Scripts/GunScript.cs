@@ -46,6 +46,15 @@ public class GunScript : MonoBehaviour
 
     void Update()
     {
+        if(GameManager.Instance.bottomlessClip == true)
+        {
+            isBottomless = true;
+        }
+        else if(GameManager.Instance.bottomlessClip == false)
+        {
+            isBottomless = false;
+        }
+
         //This makes the Controller Trigger useable
         float controllerShooting = Input.GetAxis("RT");
         isChad = GameObject.Find("Player").GetComponent<ThirdPersonMovement>().isChad;

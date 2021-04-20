@@ -39,6 +39,10 @@ public class GameManager : MonoBehaviour
     public int enemiesKilled = 0;
     public float timeReduced;
 
+    [Header("Cheats")]
+    public bool invuln;
+    public bool bottomlessClip;
+
     [Header("Pause Menu")]
     public bool isPaused;
 
@@ -64,6 +68,11 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        if(ammoUI == null)
+        {
+            //ammoUI = GameObject.Find("Magazine");
+        }
+
         if (isReloading == true)
         {
             ammoUI.SetBool("isReloading", true);

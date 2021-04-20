@@ -76,7 +76,7 @@ public class ThirdPersonMovement : MonoBehaviour
     public GameObject timerParticle;
 
     [Header("Cheats")]
-    public bool isInvicible;
+    public bool isInvincible;
     public GameObject invicibleUi;
 
     // Locks Cursor
@@ -89,6 +89,15 @@ public class ThirdPersonMovement : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.Instance.invuln == true)
+        {
+            isInvincible = true;
+        }
+        else if (GameManager.Instance.invuln == false)
+        {
+            isInvincible = false;
+        }
+
         animator = GetComponent<Animator>();
         float yawCamera = mainCamera.transform.rotation.eulerAngles.y;
         // Gets input from player movement
@@ -224,7 +233,7 @@ public class ThirdPersonMovement : MonoBehaviour
         velocity.z /= 1 + Drag.z * Time.deltaTime;
 
         // Handles Player Death
-        if (hitPoints <= 0)
+        if (GameManager.Instance.health <= 0)
         {
             gameObject.SetActive(false);
         }
@@ -323,12 +332,12 @@ public class ThirdPersonMovement : MonoBehaviour
         }
 
         // Handles Taking Damage
-        if (other.CompareTag("Bullet") && !isDashing && !isInvicible)
+        if (other.CompareTag("Bullet") && !isDashing && !isInvincible)
         {
-            hitPoints -= damageTaken;
+            GameManager.Instance.health -= damageTaken;
         }
 
-        if (isInvicible == true)
+        if (isInvincible == true)
         {
             //invicibleUi.SetActive(true);
         }
