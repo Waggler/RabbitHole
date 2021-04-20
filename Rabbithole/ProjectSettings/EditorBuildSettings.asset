@@ -8,12 +8,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Will's Scenes/Official Scenes/Main Menu.unity
     guid: ba90b8c682526c142be9fced8915a7e1
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Will's Scenes/Official Scenes/Hub Level.unity
-    guid: 091874248a086464187bd9d128efc4b8
+    path: Assets/Scenes/Will's Scenes/Official Scenes/Hub.unity
+    guid: 03814f6236937dc4b8bfb59a43e7ea52
   - enabled: 1
-    path: Assets/Scenes/Will's Scenes/Official Scenes/Mountain Kev.unity
-    guid: 791a98410aa72c64591dbd9211f93a35
+    path: Assets/Scenes/Will's Scenes/Official Scenes/Mountain.unity
+    guid: 6580898a3bc65d947925661b36bd7fd8
+  - enabled: 1
+    path: Assets/Scenes/Will's Scenes/Official Scenes/Beach.unity
+    guid: 5ead548eaf3022b46a436ab401471598
+  - enabled: 1
+    path: Assets/Scenes/Will's Scenes/Official Scenes/Burrow.unity
+    guid: e1680f6451bb8b44aa7d4cd7d81962eb
   - enabled: 1
     path: Assets/Scenes/Will's Scenes/Official Scenes/Win Screen.unity
     guid: 4615777b38101414781b2c16acb79b2a

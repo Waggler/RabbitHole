@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class TutManager : MonoBehaviour
 {
-
-    public bool tut1check;
-    public bool tut2Check;
-    public bool tut3Check;
-
     public GameObject target1;
     public GameObject target2;
     public GameObject target3;
@@ -19,12 +14,21 @@ public class TutManager : MonoBehaviour
     public GameObject log2;
     public GameObject log3;
 
-    public bool tutComplete;
+    public GameObject pointer1;
+    public GameObject pointer2;
+    public GameObject pointer3;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(GameManager.Instance.tutComplete == true)
+        {
+            target1.SetActive(false);
+            target2.SetActive(false);
+            target3.SetActive(false);
+            pickup.SetActive(false);
+            UnblockLevels();
+        }
     }
 
     // Update is called once per frame
@@ -32,26 +36,33 @@ public class TutManager : MonoBehaviour
     {
         if (Input.GetButtonDown("DashButton"))
         {
-            tut1check = true;
+            GameManager.Instance.tut1Check = true;
         }
 
         if (target1.activeSelf == false && target2.activeSelf == false && target3.activeSelf == false)
         {
-            tut2Check = true;
+            GameManager.Instance.tut2Check = true;
         }
 
         if (pickup.activeSelf == false)
         {
-            tut3Check = true;
+            GameManager.Instance.tut3Check = true;
         }
 
-        if (tut1check == true && tut2Check == true && tut3Check == true)
+        if (GameManager.Instance.tutComplete == true)
         {
-            log1.SetActive(false);
-            log2.SetActive(false);
-            log3.SetActive(false);
-            tutComplete = true;
+            UnblockLevels();
         }
+    }
 
+    void UnblockLevels()
+    {
+        log1.SetActive(false);
+        log2.SetActive(false);
+        log3.SetActive(false);
+
+        pointer1.SetActive(true);
+        pointer2.SetActive(true);
+        pointer3.SetActive(true);
     }
 }

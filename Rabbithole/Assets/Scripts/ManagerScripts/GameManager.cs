@@ -17,7 +17,12 @@ public class GameManager : MonoBehaviour
     public Animator ammoUI;
     [HideInInspector]public int maxAmmo = 9;
     public int ammo;
-    public bool isReloading;    
+    public bool isReloading;
+
+    [Header("Tutorial Checks")]
+    public bool tut1Check;
+    public bool tut2Check;
+    public bool tut3Check;
 
     [Header("Level Completion")]
     public bool tutComplete = false;
@@ -41,7 +46,7 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-           // DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -54,7 +59,6 @@ public class GameManager : MonoBehaviour
         ammoUI.SetInteger("ammoAmount", maxAmmo);
         health = maxHealth;
         ammo = maxAmmo;
-        SceneID();
     }
 
     private void Update()
@@ -71,16 +75,20 @@ public class GameManager : MonoBehaviour
             targetScene = "Lose Screen";
             ChangeScene();
         }
+        if(tut1Check == true && tut2Check == true && tut3Check == true)
+        {
+            tutComplete = true;
+        }
     }
 
     public void ChangeScene()
     {
         SceneManager.LoadSceneAsync(targetScene);
-        SceneID();
+        currentScene = targetScene;
     }
 
-    public void SceneID()
+    public void RestartScene()
     {
-        currentScene = SceneManager.GetActiveScene().ToString();
+        SceneManager.LoadSceneAsync(targetScene);
     }
 }
