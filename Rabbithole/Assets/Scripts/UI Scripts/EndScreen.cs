@@ -12,6 +12,10 @@ public class EndScreen : MonoBehaviour
         Debug.Log("Back to the Menu");
         SceneManager.LoadScene("Main Menu", LoadSceneMode.Single);
     }
+    public void Retry()
+    {
+        SceneManager.LoadScene(GameManager.Instance.currentScene.ToString());
+    }
 
     public void QuitGame()
     {
