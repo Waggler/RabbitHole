@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21309f65c36ffc34788dd65deb15550a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallZone: {fileID: 0}
+  fallZone: {fileID: 8850770514442058811}
   respawnPoint: {x: 0, y: 0, z: 0}
 --- !u!65 &8850770514442058811
 BoxCollider:
