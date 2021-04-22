@@ -77,8 +77,11 @@ public class ThirdPersonMovement : MonoBehaviour
 
     [Header("Cheats")]
     public bool isInvincible;
-    public GameObject invicibleUi;
 
+    private void Awake()
+    {
+        GameManager.Instance.player = this.gameObject;
+    }
     // Locks Cursor
     private void Start()
     {
@@ -89,15 +92,6 @@ public class ThirdPersonMovement : MonoBehaviour
 
     void Update()
     {
-        if (GameManager.Instance.invuln == true)
-        {
-            isInvincible = true;
-        }
-        else if (GameManager.Instance.invuln == false)
-        {
-            isInvincible = false;
-        }
-
         animator = GetComponent<Animator>();
         float yawCamera = mainCamera.transform.rotation.eulerAngles.y;
         // Gets input from player movement
@@ -341,18 +335,9 @@ public class ThirdPersonMovement : MonoBehaviour
         }
 
         // Handles Taking Damage
-        if (other.CompareTag("Bullet") && !isDashing && !isInvincible)
+        if (other.CompareTag("Bullet") && !isDashing && !GameManager.Instance.invuln)
         {
             GameManager.Instance.health -= damageTaken;
-        }
-
-        if (isInvincible == true)
-        {
-            //invicibleUi.SetActive(true);
-        }
-        else
-        {
-            //invicibleUi.SetActive(false);
         }
 
         // Handles Mole Reset
@@ -412,7 +397,6 @@ public class ThirdPersonMovement : MonoBehaviour
             Destroy(other.gameObject);
         }
             else
-
             return;
     }
 

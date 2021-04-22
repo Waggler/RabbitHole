@@ -25,11 +25,7 @@ public class GunScript : MonoBehaviour
     [Header("Animator")]
     public Animator animator;
     public Animator chadAnimator;
-
-    [Header("Cheats")]
-    public bool isBottomless;
-    public GameObject bottomlessUi;
-
+    public ParticleSystem damageParticle;
 
     /*
     private void Start()
@@ -46,21 +42,12 @@ public class GunScript : MonoBehaviour
 
     void Update()
     {
-        if(GameManager.Instance.bottomlessClip == true)
-        {
-            isBottomless = true;
-        }
-        else if(GameManager.Instance.bottomlessClip == false)
-        {
-            isBottomless = false;
-        }
-
         //This makes the Controller Trigger useable
         float controllerShooting = Input.GetAxis("RT");
         isChad = GameObject.Find("Player").GetComponent<ThirdPersonMovement>().isChad;
         // changed to use controller shooting and fire1 mouse shooting
 
-        if (isBottomless == false)
+        if (GameManager.Instance.bottomlessClip == false)
         {
             if (controllerShooting >= 1 && Time.time >= nextTimeToFire && GameManager.Instance.ammo > 0 && GameManager.Instance.isReloading == false && PauseMenuV2.gamePaused == false || Input.GetButton("Fire1") && Time.time >= nextTimeToFire && GameManager.Instance.ammo > 0 && GameManager.Instance.isReloading == false & PauseMenuV2.gamePaused == false)
             {
@@ -71,7 +58,7 @@ public class GunScript : MonoBehaviour
                     chadAnimator.SetTrigger("Shoot");
                 animator.SetBool("isShooting", true);
                 GameManager.Instance.ammo -= 1;
-                GameManager.Instance.ammoUI.SetInteger("ammoAmount", GameManager.Instance.ammo);
+                //GameManager.Instance.ammoUI.SetInteger("ammoAmount", GameManager.Instance.ammo);
                 audioSource.PlayOneShot(gunShot, 0.7f);
 
             }
@@ -80,7 +67,7 @@ public class GunScript : MonoBehaviour
                 animator.SetBool("isShooting", false);
             }
         }
-        else if (isBottomless == true && PauseMenuV2.gamePaused == false)
+        else if (GameManager.Instance.bottomlessClip == true && PauseMenuV2.gamePaused == false)
         {
             if (controllerShooting >= 1 && Time.time >= nextTimeToFire || Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
             {
@@ -91,7 +78,7 @@ public class GunScript : MonoBehaviour
                     chadAnimator.SetTrigger("Shoot");
                 animator.SetBool("isShooting", true);
                 
-                GameManager.Instance.ammoUI.SetInteger("ammoAmount", GameManager.Instance.ammo);
+                //GameManager.Instance.ammoUI.SetInteger("ammoAmount", GameManager.Instance.ammo);
                 audioSource.PlayOneShot(gunShot, 0.7f);
 
             }
@@ -100,18 +87,9 @@ public class GunScript : MonoBehaviour
                 animator.SetBool("isShooting", false);
             }
         }
-        if (isBottomless == true)
-        {
-            //bottomlessUi.SetActive(true);
-        }
-        else
-        {
-            //bottomlessUi.SetActive(false);
-        }
-
 
         // this used to be Input.GetKeyDown(KeyCode.R)  now it works with both controller and keyboard
-        if (isBottomless == false && PauseMenuV2.gamePaused == false)
+        if (GameManager.Instance.bottomlessClip == false && PauseMenuV2.gamePaused == false)
         {
             if (Input.GetButtonDown("Reload") && GameManager.Instance.isReloading == false && GameManager.Instance.ammo < 9)
             {
@@ -135,10 +113,12 @@ public class GunScript : MonoBehaviour
             Foxtrot boss = hit.transform.GetComponent<Foxtrot>();
             if (target != null)
             {
+                ParticleSystem dP = Instantiate(damageParticle, hit.point, Quaternion.LookRotation(hit.normal));
                 target.TakeDamage(damage);
             }
             if (boss != null && isChad == true)
             {
+                Instantiate(damageParticle, hit.point, Quaternion.LookRotation(hit.normal));
                 boss.TakeDamage(damage);
             }
 
@@ -155,7 +135,7 @@ public class GunScript : MonoBehaviour
         GameManager.Instance.isReloading = true;
         yield return new WaitForSeconds(reloadTime);
         GameManager.Instance.ammo = GameManager.Instance.maxAmmo;
-        GameManager.Instance.ammoUI.SetInteger("ammoAmount", GameManager.Instance.ammo);
+        //GameManager.Instance.ammoUI.SetInteger("ammoAmount", GameManager.Instance.ammo);
         GameManager.Instance.isReloading = false;
     }// END Reload
 }

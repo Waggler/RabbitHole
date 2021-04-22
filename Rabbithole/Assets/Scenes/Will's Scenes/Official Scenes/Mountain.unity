@@ -672,7 +672,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.4150579, y: 1}
+    m_SensorSize: {x: 2.1295938, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -688,7 +688,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31583836}
-  m_LocalRotation: {x: -0.040095925, y: 0.16814229, z: 0.006845022, w: 0.9849232}
+  m_LocalRotation: {x: -0.03947718, y: 0.2407965, z: 0.009802765, w: 0.9697229}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1810,7 +1810,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &90174894
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1820,14 +1820,14 @@ RectTransform:
   m_GameObject: {fileID: 90174893}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4109, y: 0.4109, z: 0.4109}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1265240886}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 342, y: -45}
+  m_AnchoredPosition: {x: 342, y: -135.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &90174895
@@ -4966,7 +4966,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.4150579, y: 1}
+    m_SensorSize: {x: 2.1295938, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -19645,7 +19645,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1265240888}
         m_TargetAssemblyTypeName: Settings, Assembly-CSharp
         m_MethodName: Invincibility
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -21090,7 +21090,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1265240888}
         m_TargetAssemblyTypeName: Settings, Assembly-CSharp
         m_MethodName: BClip
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -21513,7 +21513,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &936399743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21561,14 +21561,14 @@ RectTransform:
   m_GameObject: {fileID: 936399742}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4852, y: 0.4852, z: 0.4852}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1265240886}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -321, y: -77.2307}
+  m_AnchoredPosition: {x: -321, y: -135.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &941921537
@@ -22303,7 +22303,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.4150579, y: 1}
+    m_SensorSize: {x: 2.1295938, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -22319,7 +22319,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973787068}
-  m_LocalRotation: {x: -0.04035255, y: 0.1257611, z: 0.0051197005, w: 0.9912263}
+  m_LocalRotation: {x: -0.039981104, y: 0.18390688, z: 0.007486801, w: 0.9821017}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -23390,6 +23390,7 @@ GameObject:
   - component: {fileID: 1031919615}
   - component: {fileID: 1031919614}
   - component: {fileID: 1031919613}
+  - component: {fileID: 1031919619}
   m_Layer: 5
   m_Name: Pause Canvas
   m_TagString: Untagged
@@ -23603,6 +23604,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1031919619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031919612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23f39128d56260e4084248a9b51288a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 0e6a10d641c319f4392a9eedc879113c, type: 2}
+  gameisPaused: 0
+  bottomlessCheck: {fileID: 927872500}
+  invulnerableCheck: {fileID: 870332766}
+  volumeSlider: {fileID: 252866838}
 --- !u!1001 &1037734834
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28458,11 +28476,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 0e6a10d641c319f4392a9eedc879113c, type: 2}
-  bClip: 0
-  bClipUI: {fileID: 90174893}
-  invincibleUI: {fileID: 936399742}
-  invincible: 0
   gameisPaused: 0
+  bottomlessCheck: {fileID: 927872500}
+  invulnerableCheck: {fileID: 870332766}
+  volumeSlider: {fileID: 252866838}
 --- !u!1001 &1271077971
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34828,6 +34845,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthFill: {fileID: 675874338}
+  healthBase: {fileID: 832494480}
+  invulnerable: {fileID: 936399743}
 --- !u!1 &1610080480
 GameObject:
   m_ObjectHideFlags: 0
@@ -36666,7 +36685,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.4150579, y: 1}
+    m_SensorSize: {x: 2.1295938, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -36682,7 +36701,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699908860}
-  m_LocalRotation: {x: -0.04035255, y: 0.1257611, z: 0.0051197005, w: 0.9912263}
+  m_LocalRotation: {x: -0.039981104, y: 0.18390688, z: 0.007486801, w: 0.9821017}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -40035,6 +40054,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1900412811}
+  - component: {fileID: 1900412812}
   m_Layer: 5
   m_Name: Ammo
   m_TagString: Untagged
@@ -40062,6 +40082,21 @@ RectTransform:
   m_AnchoredPosition: {x: -76.99994, y: 89.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1900412812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900412810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b621d76130d6add4fba04c19180b7498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammoUI: {fileID: 1563064597}
+  bottomlessClip: {fileID: 90174895}
+  ammoAnimator: {fileID: 1563064599}
 --- !u!1 &1905401813
 GameObject:
   m_ObjectHideFlags: 0
@@ -43043,7 +43078,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043142685}
-  m_LocalRotation: {x: -0.040307146, y: 0.13425834, z: 0.005465619, w: 0.9901112}
+  m_LocalRotation: {x: -0.039891154, y: 0.195341, z: 0.007952287, w: 0.9798915}
   m_LocalPosition: {x: -154, y: -42.392857, z: -1953.6754}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -44526,8 +44561,8 @@ MonoBehaviour:
   reloadSound: {fileID: 8300000, guid: fc630610b9aac2643b9beb4d03d6edb4, type: 3}
   animator: {fileID: 2143083827}
   chadAnimator: {fileID: 295553679}
-  isBottomless: 0
-  bottomlessUi: {fileID: 0}
+  damageParticle: {fileID: 1124139981951401986, guid: 1bd06499fa559e148945d1162d593163,
+    type: 3}
 --- !u!23 &2143083830
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -44627,7 +44662,6 @@ MonoBehaviour:
   starsParticle: {fileID: 1002785618}
   timerParticle: {fileID: 0}
   isInvincible: 0
-  invicibleUi: {fileID: 0}
 --- !u!143 &2143083832
 CharacterController:
   m_ObjectHideFlags: 0

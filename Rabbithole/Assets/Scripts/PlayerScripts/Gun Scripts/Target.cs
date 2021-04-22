@@ -7,6 +7,7 @@ public class Target : MonoBehaviour
 {
     // Health of Target
     public float health = 50f;
+    public ParticleSystem damageParticle;
 
     public void TakeDamage(float amount)
     {

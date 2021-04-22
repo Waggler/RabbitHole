@@ -11,10 +11,9 @@ public class GameManager : MonoBehaviour
     [Header("Player Settings")]
     public GameObject player;
     [HideInInspector]public float maxHealth = 8;
-    public float health;
+    public float health = 8;
 
     [Header("Player Ammo and Shooting")]
-    public Animator ammoUI;
     [HideInInspector]public int maxAmmo = 9;
     public int ammo;
     public bool isReloading;
@@ -39,7 +38,8 @@ public class GameManager : MonoBehaviour
     public int enemiesKilled = 0;
     public float timeReduced;
 
-    [Header("Cheats")]
+    [Header("Settings and Cheats")]
+    public float volume;
     public bool invuln;
     public bool bottomlessClip;
 
@@ -61,33 +61,16 @@ public class GameManager : MonoBehaviour
   
     private void Start()
     {
-        ammoUI.SetInteger("ammoAmount", maxAmmo);
         health = maxHealth;
         ammo = maxAmmo;
     }
 
     private void Update()
     {
-        if(ammoUI == null)
-        {
-            ammoUI = GameObject.Find("Magazine").GetComponentInChildren<Animator>();
-        }
-
-        if(player == null)
-        {
-            player = GameObject.Find("Player");
-        }
-
-        if (isReloading == true)
-        {
-            ammoUI.SetBool("isReloading", true);
-        }
-        else
-            ammoUI.SetBool("isReloading", false);
-
         if (health <= 0)
         {
             SceneManager.LoadScene("Lose Screen");
+            health = maxHealth;
         }
         
         if(tut1Check == true && tut2Check == true && tut3Check == true)
@@ -108,7 +91,6 @@ public class GameManager : MonoBehaviour
         ammo = maxAmmo;
         health = maxHealth;
         currentScene = targetScene;
-
     }
 
     public void RestartScene()
