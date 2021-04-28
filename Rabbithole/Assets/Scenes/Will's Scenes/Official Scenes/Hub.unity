@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1551305351}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -812,7 +812,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 2.1295938, y: 1}
+    m_SensorSize: {x: 1.7779905, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -828,7 +828,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31583836}
-  m_LocalRotation: {x: -0.039477147, y: 0.2407965, z: 0.009802757, w: 0.9697229}
+  m_LocalRotation: {x: -0.039798927, y: 0.20637234, z: 0.008401355, w: 0.97762775}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1860,7 +1860,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 2.1295938, y: 1}
+    m_SensorSize: {x: 1.7779905, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -4910,6 +4910,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &607770347
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607770345}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.03, y: -0.2, z: 0.03}
+  m_Center: {x: 0, y: -0.06, z: 0.02}
 --- !u!1 &632799243
 GameObject:
   m_ObjectHideFlags: 0
@@ -5795,14 +5808,13 @@ GameObject:
   - component: {fileID: 797682012}
   - component: {fileID: 797682013}
   - component: {fileID: 797682014}
-  - component: {fileID: 797682015}
   m_Layer: 12
   m_Name: Get Off
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &797682012
 Transform:
   m_ObjectHideFlags: 0
@@ -5845,21 +5857,7 @@ MonoBehaviour:
   dialogue:
     name: Jacklyn Rabot
     sentences:
-    - Get the hell off of me Gunny!
---- !u!114 &797682015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 797682011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d832499e165cf740b01f6a297f11bed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 50
-  damageParticle: {fileID: 0}
+    - Gunny get of of me and get back to shootin foxes.
 --- !u!1 &806245748 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 506191967525312113, guid: 7f29cd157b9906c46a1a786f4402d963,
@@ -7044,7 +7042,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 2.1295938, y: 1}
+    m_SensorSize: {x: 1.7779905, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -7060,7 +7058,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973787068}
-  m_LocalRotation: {x: -0.03998108, y: 0.1839069, z: 0.0074867974, w: 0.9821017}
+  m_LocalRotation: {x: -0.04017771, y: 0.15591486, z: 0.0063472437, w: 0.98693264}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -10924,6 +10922,26 @@ MonoBehaviour:
   bottomlessCheck: {fileID: 585143317}
   invulnerableCheck: {fileID: 595513917}
   volumeSlider: {fileID: 1021288026}
+--- !u!1 &1431497095 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4408927159408288416, guid: d51d59001d9ca184e9981a85f943a8c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 607770343}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1431497098
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431497095}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!114 &1441148130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12406,7 +12424,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 2.1295938, y: 1}
+    m_SensorSize: {x: 1.7779905, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -12422,7 +12440,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699908860}
-  m_LocalRotation: {x: -0.039981045, y: 0.1839069, z: 0.0074867913, w: 0.9821017}
+  m_LocalRotation: {x: -0.040177748, y: 0.15591486, z: 0.0063472497, w: 0.98693264}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -12495,7 +12513,8 @@ MonoBehaviour:
     - 'Look at you go! Be sure to dodge the bullets those foxes send your way, don''t
       need to waste time trying to patch you up out there. '
     - Now Gunny, I know you can use that pistol still. Just in case you're still
-      groggy though, use Left click or right trigger to shoot.
+      groggy though, use Left click or right trigger to shoot. Try taking out those
+      targets to start.
     - Still packs a punch! Aside from carrots, I know you got a ton of ammo in those
       cargo pockets, press R or the X button to reload.
     - If you ever do get clipped out there, you might find one of them first aid
@@ -12503,8 +12522,8 @@ MonoBehaviour:
     - Now get on out there Gunny and send these foxes back to wherever they crawled
       out of! I'd suggest trying High Hare Heights first to make sure ya still got
       it!
-    - It's the rabbithole just behind me, head on out whenever you're ready or take
-      some extra pot shots at stinky ol Foxtrot over there.
+    - It's the rabbithole just behind me, head on out whenever you're ready, I'll
+      be here.
 --- !u!4 &1715017267
 Transform:
   m_ObjectHideFlags: 0
@@ -14360,7 +14379,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043142685}
-  m_LocalRotation: {x: -0.039891068, y: 0.195341, z: 0.007952269, w: 0.9798915}
+  m_LocalRotation: {x: -0.040110443, y: 0.16604352, z: 0.006759586, w: 0.98527914}
   m_LocalPosition: {x: -104.85, y: 2.6471431, z: -5.6554284}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
