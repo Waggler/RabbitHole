@@ -57,6 +57,10 @@ public class PauseMenuV2 : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         pauseMenu.SetActive(false);
+        optionsMenu.SetActive(false);
+        htpMenu.SetActive(false);
+        keyboardMenu.SetActive(false);
+        controllerMenu.SetActive(false);
         Time.timeScale = 1f;
         gamePaused = false;
     }
