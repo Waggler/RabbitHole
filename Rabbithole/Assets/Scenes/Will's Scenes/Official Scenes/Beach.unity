@@ -919,7 +919,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31583836}
-  m_LocalRotation: {x: -0.039798904, y: 0.20637232, z: 0.008401351, w: 0.97762775}
+  m_LocalRotation: {x: -0.03979891, y: 0.2063723, z: 0.008401351, w: 0.97762775}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -19986,8 +19986,10 @@ MonoBehaviour:
   damageTaken: 1
   moleAnimator: {fileID: 0}
   chadAnimator: {fileID: 1609650862}
-  audiosource: {fileID: 0}
+  audiosource: {fileID: 2143083828}
   clip: {fileID: 0}
+  hurtClip: {fileID: 8300000, guid: 6952062571a01814cbefcd0246976e71, type: 3}
+  chadHurtClip: {fileID: 8300000, guid: edb23a9372beffa49813a1be5908ab0b, type: 3}
   karatOneUI: {fileID: 0}
   karatTwoUI: {fileID: 0}
   karatThreeUI: {fileID: 0}

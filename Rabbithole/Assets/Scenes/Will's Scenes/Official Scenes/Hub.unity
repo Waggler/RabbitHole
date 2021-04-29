@@ -812,7 +812,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.7779905, y: 1}
+    m_SensorSize: {x: 1.777512, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -828,7 +828,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31583836}
-  m_LocalRotation: {x: -0.039798927, y: 0.20637234, z: 0.008401355, w: 0.97762775}
+  m_LocalRotation: {x: -0.03979937, y: 0.20632371, z: 0.00839938, w: 0.977638}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1860,7 +1860,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.7779905, y: 1}
+    m_SensorSize: {x: 1.777512, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -6981,7 +6981,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.7779905, y: 1}
+    m_SensorSize: {x: 1.777512, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -6997,7 +6997,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973787068}
-  m_LocalRotation: {x: -0.04017771, y: 0.15591486, z: 0.0063472437, w: 0.98693264}
+  m_LocalRotation: {x: -0.040177975, y: 0.15587589, z: 0.0063456595, w: 0.98693883}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -12363,7 +12363,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.7779905, y: 1}
+    m_SensorSize: {x: 1.777512, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -12379,7 +12379,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699908860}
-  m_LocalRotation: {x: -0.040177744, y: 0.15591486, z: 0.006347249, w: 0.98693264}
+  m_LocalRotation: {x: -0.040177975, y: 0.15587589, z: 0.0063456595, w: 0.98693883}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -14317,7 +14317,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043142685}
-  m_LocalRotation: {x: -0.04011044, y: 0.16604352, z: 0.006759586, w: 0.98527914}
+  m_LocalRotation: {x: -0.04011071, y: 0.16600263, z: 0.006757919, w: 0.98528606}
   m_LocalPosition: {x: -104.85, y: 2.6471431, z: -5.6554284}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -15495,7 +15495,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -15693,8 +15693,10 @@ MonoBehaviour:
   damageTaken: 1
   moleAnimator: {fileID: 0}
   chadAnimator: {fileID: 1149603221}
-  audiosource: {fileID: 0}
+  audiosource: {fileID: 2143083828}
   clip: {fileID: 0}
+  hurtClip: {fileID: 8300000, guid: 6952062571a01814cbefcd0246976e71, type: 3}
+  chadHurtClip: {fileID: 8300000, guid: edb23a9372beffa49813a1be5908ab0b, type: 3}
   karatOneUI: {fileID: 0}
   karatTwoUI: {fileID: 0}
   karatThreeUI: {fileID: 0}
