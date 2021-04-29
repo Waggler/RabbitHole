@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -535,7 +535,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.7779905, y: 1}
+    m_SensorSize: {x: 1.7771318, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -551,8 +551,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31583836}
-  m_LocalRotation: {x: -0.039798934, y: 0.20637234, z: 0.008401362, w: 0.97762775}
-  m_LocalPosition: {x: 0, y: 0.00000047683716, z: 0}
+  m_LocalRotation: {x: -0.039799675, y: 0.20628503, z: 0.0083978, w: 0.9776461}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 520693328}
@@ -1726,7 +1726,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.7779905, y: 1}
+    m_SensorSize: {x: 1.7771318, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -10564,7 +10564,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.7779905, y: 1}
+    m_SensorSize: {x: 1.7771318, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -10580,8 +10580,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973787068}
-  m_LocalRotation: {x: -0.040177733, y: 0.15591484, z: 0.006347246, w: 0.9869327}
-  m_LocalPosition: {x: 0, y: 0.00000047683716, z: 0}
+  m_LocalRotation: {x: -0.040178195, y: 0.15584497, z: 0.006344405, w: 0.98694366}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1484036521}
@@ -18276,7 +18276,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.7779905, y: 1}
+    m_SensorSize: {x: 1.7771318, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -18292,8 +18292,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699908860}
-  m_LocalRotation: {x: -0.040177677, y: 0.15591484, z: 0.0063472413, w: 0.9869327}
-  m_LocalPosition: {x: 0, y: 0.00000047683716, z: 0}
+  m_LocalRotation: {x: -0.040178195, y: 0.15584497, z: 0.006344405, w: 0.98694366}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 144614690}
@@ -21328,7 +21328,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043142685}
-  m_LocalRotation: {x: -0.040110372, y: 0.1660435, z: 0.0067595732, w: 0.98527914}
+  m_LocalRotation: {x: -0.04011094, y: 0.16597012, z: 0.0067565967, w: 0.98529154}
   m_LocalPosition: {x: -12.46, y: 7.2171426, z: 33.82457}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -22554,8 +22554,10 @@ MonoBehaviour:
   damageTaken: 1
   moleAnimator: {fileID: 0}
   chadAnimator: {fileID: 1078685372}
-  audiosource: {fileID: 0}
+  audiosource: {fileID: 2143083828}
   clip: {fileID: 0}
+  hurtClip: {fileID: 8300000, guid: 6952062571a01814cbefcd0246976e71, type: 3}
+  chadHurtClip: {fileID: 8300000, guid: edb23a9372beffa49813a1be5908ab0b, type: 3}
   karatOneUI: {fileID: 1922361280}
   karatTwoUI: {fileID: 1945620302}
   karatThreeUI: {fileID: 960668103}

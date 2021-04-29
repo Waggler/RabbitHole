@@ -55,6 +55,8 @@ public class ThirdPersonMovement : MonoBehaviour
     [Header("Audio Settings")]
     public AudioSource audiosource;
     public AudioClip clip;
+    public AudioClip hurtClip;
+    public AudioClip chadHurtClip;
 
     [Header("Karat UI")]
 
@@ -338,6 +340,14 @@ public class ThirdPersonMovement : MonoBehaviour
         if (other.CompareTag("Bullet") && !isDashing && !GameManager.Instance.invuln)
         {
             GameManager.Instance.health -= damageTaken;
+            if (isChad == true)
+            {
+                audiosource.PlayOneShot(chadHurtClip);
+            }
+            else
+            {
+                audiosource.PlayOneShot(hurtClip);
+            }
         }
 
         // Handles Mole Reset
