@@ -81,7 +81,19 @@ public class GameManager : MonoBehaviour
         if (level1Complete && level2Complete && level3Complete)
         {
             allLevelsComplete = true;
+        }
+
+        if (allLevelsComplete == true)
+        {
             SceneManager.LoadScene("Win Screen");
+            level1Complete = false;
+            level2Complete = false;
+            level3Complete = false;
+            allLevelsComplete = false;
+            tut1Check = false;
+            tut2Check = false;
+            tut3Check = false;
+            tutComplete = false;
         }
     }
 
